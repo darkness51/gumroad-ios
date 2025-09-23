@@ -1,0 +1,174 @@
+# Gumroad iOS app
+
+This is an iOS app that allows our users to both view sales data and charts as a creator, and also consume the content they buy on Gumroad.
+Audio, video, PDF and ePub files are viewable in the app. All other content can be shared to other apps or downloaded.
+
+## Local development
+
+### Prerequisites
+
+1. We use [CocoaPods](https://cocoapods.org/) as a dependency manager. Install it as
+
+```sh
+gem install cocoapods
+```
+
+2. Once CocoaPods is installed, install the dependencies using
+
+```sh
+pod install
+```
+
+3. **Set up credentials** - Copy the example credential files and populate with real values:
+
+```sh
+cp Credentials/Development.xcconfig.example Credentials/Development.xcconfig
+cp Credentials/Production.xcconfig.example Credentials/Production.xcconfig
+cp Credentials/Staging.xcconfig.example Credentials/Staging.xcconfig
+```
+
+### Building the app and opening it in a simulator
+
+1. Always open the Xcode workspace of the project instead of the project file.
+
+```sh
+open Gumroad.xcworkspace
+```
+
+If you are on Apple silicon, run Xcode using Rosetta:
+
+- Enable Rosetta from `Applications` → `Xcode` (right click) → `Get Info` → Enable `Open using Rosetta`
+- If you cannot find the `Open using Rosetta` option in `Get Info`, enable `Product` → `Destination` → `Show All Run Destinations` in Xcode, then choose a Rosetta enabled iOS simulator from `Product` → `Destination`
+
+2. Choose an iOS simulator and build + run the project as shown below.
+
+![building-project](./docs/images/building-project.jpeg)
+
+You can also use `Cmd+R` shortcut to build + run the project.
+
+### Connecting to the locally running [gumroad/web](https://github.com/gumroad/web) server
+
+If the intended API is not yet deployed to production or staging, you can build the app to point to your locally running gumroad/web server on https://gumroad.dev.
+
+To do so:
+
+1. Get the `uid` and `secret` credentials from the [`development mobile oauth app` OAuth application](https://github.com/antiwork/gumroad/blob/main/db/seeds/030_staging/mobile_oauth_application.rb)
+
+2. Encrypt them using the ROT13 cipher:
+
+```sh
+echo "credential-value-here" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+
+3. Update the `OAUTH_CLIENT_ID` and `OAUTH_SECRET_ID` values in `Credentials/Development.xcconfig` with these encrypted credentials.
+
+4. Fill in the other required credentials in the same file (see the example files for guidance).
+
+Now you should be able to login in the app (in simulator) as any user registered in your locally running gumroad/web server.
+
+### Credential Management
+
+All sensitive credentials are centralized in the `Credentials/` directory:
+
+- `Credentials/Development.xcconfig` - Development environment credentials
+- `Credentials/Production.xcconfig` - Production environment credentials
+- `Credentials/Staging.xcconfig` - Staging environment credentials
+
+Example files (`.xcconfig.example`) are provided to show the required format. Copy these to create your actual credential files.
+
+#### Google Services Configuration
+
+The app requires a `GoogleService-Info.plist` file for Firebase and Google Services integration:
+
+1. **Set up the configuration file**:
+   ```sh
+   cp "Gumroad/Supporting Files/GoogleService-Info.plist.example" "Gumroad/Supporting Files/GoogleService-Info.plist"
+   ```
+
+2. **Configure Firebase credentials**: Open the newly copied `GoogleService-Info.plist` file and replace the dummy placeholder values with your actual Firebase credentials.
+
+
+### Connecting to the staging environment
+
+In order to build + run the app that points to the gumroad/web server's staging environment (running on https://app.staging.gumroad.com), edit the scheme in Xcode as follows.
+
+![editing-scheme](./docs/images/editing-scheme.jpeg)
+
+Then set the "Build Configuration" to `Staging` for the `Run` operation.
+
+![setting-run-build-configuration-to-staging](docs/images/setting-run-build-configuration-to-staging.jpeg)
+
+Re-build + run the project and then it should allow you to login as any staging user in the simulator.
+
+> **Note**
+> Please revert the changes made to the `Gumroad.xcodeproj/xcshareddata/xcschemes/Gumroad.xcscheme` file whenever you edit the scheme. Do not check-in those changes.
+
+### Connecting to the production environment
+
+Similar to the staging environment, it's easy to point the app in simulator to the gumroad/web server's production environment (running on https://gumroad.com).
+
+Edit the scheme and set the "Build Configuration" to `Release` for the `Run` operation.
+
+## Archiving builds and submitting it to TestFlight
+
+### Prerequisites
+
+Once you are ready with your changes, you should submit a build with those changes to TestFlight so other team members can help you test it.
+
+You must be a member of the Gumroad team on TestFlight to do so. Please ping Sahil in `#mobile-apps` Slack channel with your Apple ID so he can invite you to become a member of the Gumroad team.
+
+Once you accept the invitation, select `Gumroad, Inc.` in the `Team` dropdown under the project's `Signing & Capabilities` settings.
+
+![setting-project-team](./docs/images/setting-project-team.jpeg)
+
+### Versioning builds
+
+Before archiving a build, we must first set a proper version.
+
+We use "YYYY.MM.DD" format for versioning. The builds of the same version should have an incremented `Build` number.
+
+![versioning](docs/images/versioning.jpeg)
+
+### Archiving a build configured for the staging environment & submitting it to TestFlight
+
+1. Set `Use "Staging" (configuration) for command-line builds` as follows.
+
+    ![using-staging-configuration-for-command-line-builds](./docs/images/using-staging-configuration-for-command-line-builds.jpeg)
+
+2. Edit scheme and set the "Build configuration" to `Staging`  for the `Archive` operation.
+
+    ![editing-scheme](./docs/images/editing-scheme.jpeg)
+
+    ![setting-archive-build-configuration-to-staging](./docs/images/setting-archive-build-configuration-to-staging.jpeg)
+
+3. Select `Any iOS device (arm64)` to build an archive. Xcode does not allow building an archive for a simulator.
+
+    ![selecting-device-for-archive](docs/images/selecting-device-for-archive.jpeg)
+
+4. Archive and then distribute it.
+
+    ![archiving](./docs/images/archiving.jpeg)
+
+    ![distributing](./docs/images/distributing.jpeg)
+
+5. Follow the on-screen instructions and finally submit it to TestFlight.
+6. After a while, it should start reflecting in the TestFlight web interface. Also, Apple should have already notified the users in the "Internal testing" group so they can test this build.
+
+    ![builds-in-test-flight](./docs/images/builds-in-test-flight.jpeg)
+
+> **Note**
+> Once the testing is finished, please revert the changes made to `Gumroad.xcodeproj/project.pbxproj` and `Gumroad.xcodeproj/xcshareddata/xcschemes/Gumroad.xcscheme` files. Do not check-in those changes.
+
+### Archiving a build configured for the production environment & submitting it to TestFlight
+
+Follow the same steps as above (of the staging environment) except set the configuration to `Release` in step 1 and 2 instead of `Staging`.
+
+## Releasing a production build to App Store
+
+Once you have successfully tested a production build in TestFlight, the same build can be submitted to the App Store for approval.
+
+Please enter an appropriate copy for the `What's New in This Version` and click `Add for Review`.
+
+![releasing-to-app-store](./docs/images/releasing-to-app-store.png)
+
+It can take about a day or two for Apple to review and accept a submission. Once accepted, it can take up to another 24 hours for that released version to become publicly available in the App Store.

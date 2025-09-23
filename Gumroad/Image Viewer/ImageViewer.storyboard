@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ImageViewerViewController" customModule="iOSBuyer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HK8-1x-v26" userLabel="Back Button">
+                                <rect key="frame" x="16" y="52" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HK8-1x-v26" secondAttribute="height" id="YoA-w2-qa2"/>
+                                    <constraint firstAttribute="width" constant="32" id="gBN-zD-g02"/>
+                                </constraints>
+                                <state key="normal" image="caret-left"/>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h7N-37-7O9"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uxd-vZ-Mqr">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaZ-Iz-un9">
+                                <rect key="frame" x="366" y="52" width="32" height="32"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DGE-AI-HnL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Uxd-vZ-Mqr" secondAttribute="bottom" id="0z5-sg-k54"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GaZ-Iz-un9" secondAttribute="trailing" constant="16" id="3Ba-36-NfW"/>
+                            <constraint firstItem="GaZ-Iz-un9" firstAttribute="width" secondItem="HK8-1x-v26" secondAttribute="width" id="5bc-cu-wKF"/>
+                            <constraint firstItem="HK8-1x-v26" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="CJ8-aq-okk"/>
+                            <constraint firstItem="Uxd-vZ-Mqr" firstAttribute="top" secondItem="HK8-1x-v26" secondAttribute="bottom" constant="8" id="Zfq-5c-fZU"/>
+                            <constraint firstItem="GaZ-Iz-un9" firstAttribute="top" secondItem="HK8-1x-v26" secondAttribute="top" id="cw9-LV-46B"/>
+                            <constraint firstItem="GaZ-Iz-un9" firstAttribute="height" secondItem="HK8-1x-v26" secondAttribute="height" id="eSQ-Jh-FFf"/>
+                            <constraint firstItem="Uxd-vZ-Mqr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lwN-C7-0Gm"/>
+                            <constraint firstItem="HK8-1x-v26" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="ufq-sA-gVU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Uxd-vZ-Mqr" secondAttribute="trailing" id="vZx-z1-iCA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Uxd-vZ-Mqr" id="gss-I6-Abm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="caret-left" width="32" height="32"/>
+        <image name="share" width="18" height="18"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

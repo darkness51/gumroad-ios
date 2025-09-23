@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mabry Pro.otf">
+            <string>MabryPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="p0N-jO-9lZ">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S2e-JT-QcM" customClass="LoginViewController" customModule="Gumroad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zj4-ry-im2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-logo" translatesAutoresizingMaskIntoConstraints="NO" id="YSO-Wm-dKU">
+                                <rect key="frame" x="74" y="123.00000000000001" width="245" height="33.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="ymh-Gp-Zyk"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ivK-sR-CZ8">
+                                <rect key="frame" x="16" y="204.66666666666663" width="361" height="294"/>
+                                <subviews>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KBH-kd-XNh">
+                                        <rect key="frame" x="0.0" y="-24" width="361" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-BL-SuG">
+                                                <rect key="frame" x="180.66666666666666" y="0.0" width="0.0" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="AJu-BL-SuG" secondAttribute="height" multiplier="1029/144" id="Flj-70-96B"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="facebook-button"/>
+                                                <connections>
+                                                    <action selector="facebookButtonClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="0g2-cy-VEb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3P7-9z-WoA">
+                                                <rect key="frame" x="180.66666666666666" y="12" width="0.0" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="3P7-9z-WoA" secondAttribute="height" multiplier="1029/144" id="4Uw-EG-5z7"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="google-button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="googleButtonClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="ICy-NC-xdQ"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5H-Is-9so">
+                                                <rect key="frame" x="180.66666666666666" y="18" width="0.0" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="o5H-Is-9so" secondAttribute="height" multiplier="1029/144" id="38M-zy-fep"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="twitter-button"/>
+                                                <connections>
+                                                    <action selector="twitterButtonClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="czF-B6-W9r"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joa-fx-V61">
+                                                <rect key="frame" x="180.66666666666666" y="24" width="0.0" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="joa-fx-V61" secondAttribute="height" multiplier="1029/144" id="0ly-K1-YBk"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="apple-button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="appleButtonClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="4dz-jI-REo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Cb-XD-2Y0">
+                                        <rect key="frame" x="0.0" y="-24" width="361" height="24"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWq-o1-f8X">
+                                                <rect key="frame" x="0.0" y="11.666666666666686" width="157.66666666666666" height="1"/>
+                                                <color key="backgroundColor" name="GumroadBorderColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="lOu-zM-f5G"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ir2-9v-JUi">
+                                                <rect key="frame" x="172.66666666666666" y="4" width="16" height="16"/>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                                <color key="textColor" name="GumroadLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-bY-YVj">
+                                                <rect key="frame" x="203.66666666666663" y="11.666666666666686" width="157.33333333333337" height="1"/>
+                                                <color key="backgroundColor" name="GumroadBorderColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Tyt-Dh-OCf"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ir2-9v-JUi" firstAttribute="centerX" secondItem="3Cb-XD-2Y0" secondAttribute="centerX" id="MuH-Z5-uzy"/>
+                                            <constraint firstAttribute="height" constant="24" id="x9u-38-SPo"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-bM-6nI">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKq-kQ-poq">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="ihX-Xi-BNd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                                <color key="textColor" name="GumroadLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7W-Sg-WPs">
+                                                <rect key="frame" x="0.0" y="28" width="361" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="klW-Nh-rhH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="light" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aro-bX-ZIB">
+                                        <rect key="frame" x="0.0" y="100.00000000000003" width="361" height="76"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIe-DC-ZWw">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xog-q3-7b7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="20"/>
+                                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                                        <color key="textColor" name="GumroadLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="wet-5f-Z9s">
+                                                        <rect key="frame" x="70" y="0.0" width="124" height="20"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="vY1-nZ-Ydh"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Li4-Uh-H6n">
+                                                        <rect key="frame" x="194" y="0.0" width="167" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="bds-Bf-6Dl"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Forgot your password?">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="16" name="MabryPro-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="forgotPasswordClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="qxV-gv-Pdp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QKD-tM-DgS">
+                                                <rect key="frame" x="0.0" y="28" width="361" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="hzR-a0-Lxy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="light" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gts-4v-FYm">
+                                        <rect key="frame" x="0.0" y="200.00000000000003" width="361" height="50"/>
+                                        <color key="backgroundColor" name="GumroadLabelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="s6e-wc-OFF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButtonClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="dfe-gj-ZP5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94U-SB-frk">
+                                        <rect key="frame" x="54.666666666666686" y="274" width="252" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Ama-Gt-hoy"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Don't have an account? Create one">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="16" name="MabryPro-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="createAccountClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="dHQ-W2-guy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KBH-kd-XNh" firstAttribute="trailing" secondItem="3Cb-XD-2Y0" secondAttribute="trailing" id="3at-Uv-fXG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gts-4v-FYm" secondAttribute="trailing" id="5QY-Lw-RFD"/>
+                                    <constraint firstAttribute="trailing" secondItem="QTm-bM-6nI" secondAttribute="trailing" id="7o5-FL-MoB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aro-bX-ZIB" secondAttribute="trailing" id="JR6-cW-ikC"/>
+                                    <constraint firstItem="3Cb-XD-2Y0" firstAttribute="width" secondItem="ivK-sR-CZ8" secondAttribute="width" id="Mv0-JE-dGS"/>
+                                    <constraint firstItem="Gts-4v-FYm" firstAttribute="leading" secondItem="ivK-sR-CZ8" secondAttribute="leading" id="NBI-nH-Wcw"/>
+                                    <constraint firstItem="KBH-kd-XNh" firstAttribute="leading" secondItem="3Cb-XD-2Y0" secondAttribute="leading" id="VB7-qm-wAD"/>
+                                    <constraint firstItem="Aro-bX-ZIB" firstAttribute="leading" secondItem="ivK-sR-CZ8" secondAttribute="leading" id="Yyy-TQ-xOy"/>
+                                    <constraint firstItem="QTm-bM-6nI" firstAttribute="leading" secondItem="ivK-sR-CZ8" secondAttribute="leading" id="cFn-sL-8xw"/>
+                                    <constraint firstAttribute="width" constant="335" id="d8p-ce-3MB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="d8p-ce-3MB"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="d8p-ce-3MB"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QMT-hM-CIP">
+                                <rect key="frame" x="16" y="204.66666666666663" width="361" height="208"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="398-Eg-KXY">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="XB2-yy-bJm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHk-Fh-7KH">
+                                        <rect key="frame" x="0.0" y="32" width="361" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UBe-YK-R0y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="light" textContentType="email"/>
+                                    </textField>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baT-KH-RMF">
+                                        <rect key="frame" x="0.0" y="94.000000000000028" width="361" height="0.0"/>
+                                        <color key="backgroundColor" name="GumroadBorderColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="gDa-Ep-LmB"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwW-gi-4wA">
+                                        <rect key="frame" x="0.0" y="106.00000000000003" width="361" height="50"/>
+                                        <color key="backgroundColor" name="GumroadLabelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="48n-Ha-hMe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                        <state key="normal" title="Reset password">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetPasswordButtonClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="eCO-zK-PEb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilQ-5b-6HA">
+                                        <rect key="frame" x="0.0" y="168.00000000000003" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="V6q-s5-YJU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                        <state key="normal" title="Back to login">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backToLoginClicked:" destination="S2e-JT-QcM" eventType="touchUpInside" id="JHv-rN-k8B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view hidden="YES" alpha="0.88" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-Dl-X2v">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spinner" translatesAutoresizingMaskIntoConstraints="NO" id="ZMd-5b-Aum">
+                                        <rect key="frame" x="159" y="388.66666666666669" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="Eft-Ie-lfh"/>
+                                            <constraint firstAttribute="height" constant="75" id="aCY-YE-nFz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZMd-5b-Aum" firstAttribute="centerX" secondItem="iYG-Dl-X2v" secondAttribute="centerX" id="Cnm-NJ-fQc"/>
+                                    <constraint firstItem="ZMd-5b-Aum" firstAttribute="centerY" secondItem="iYG-Dl-X2v" secondAttribute="centerY" id="u3g-aX-dLf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p9X-EQ-7rD"/>
+                        <color key="backgroundColor" name="GumroadTopViewColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iYG-Dl-X2v" secondAttribute="trailing" id="3Ol-W4-lCQ"/>
+                            <constraint firstItem="p9X-EQ-7rD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ivK-sR-CZ8" secondAttribute="bottom" constant="16" id="9FG-CF-60n"/>
+                            <constraint firstItem="iYG-Dl-X2v" firstAttribute="top" secondItem="zj4-ry-im2" secondAttribute="top" id="Akr-Oz-C5e"/>
+                            <constraint firstItem="QMT-hM-CIP" firstAttribute="centerX" secondItem="ivK-sR-CZ8" secondAttribute="centerX" id="HSj-bc-f22"/>
+                            <constraint firstItem="ivK-sR-CZ8" firstAttribute="centerX" secondItem="YSO-Wm-dKU" secondAttribute="centerX" id="XWi-2R-C5y"/>
+                            <constraint firstItem="QMT-hM-CIP" firstAttribute="top" secondItem="ivK-sR-CZ8" secondAttribute="top" id="avn-cu-jbe"/>
+                            <constraint firstAttribute="bottom" secondItem="iYG-Dl-X2v" secondAttribute="bottom" id="kM6-fz-3IR"/>
+                            <constraint firstItem="YSO-Wm-dKU" firstAttribute="centerX" secondItem="p9X-EQ-7rD" secondAttribute="centerX" id="kyw-mA-cSc"/>
+                            <constraint firstItem="YSO-Wm-dKU" firstAttribute="top" secondItem="p9X-EQ-7rD" secondAttribute="top" priority="250" constant="64" id="mCf-ih-fUX"/>
+                            <constraint firstItem="iYG-Dl-X2v" firstAttribute="leading" secondItem="zj4-ry-im2" secondAttribute="leading" id="nBl-FM-IMm"/>
+                            <constraint firstItem="ivK-sR-CZ8" firstAttribute="width" secondItem="p9X-EQ-7rD" secondAttribute="width" constant="-32" id="qbt-Ts-A8F"/>
+                            <constraint firstItem="QMT-hM-CIP" firstAttribute="width" secondItem="ivK-sR-CZ8" secondAttribute="width" id="uQv-5H-RHE"/>
+                            <constraint firstItem="ivK-sR-CZ8" firstAttribute="top" secondItem="YSO-Wm-dKU" secondAttribute="bottom" constant="48" id="y5g-Zg-139"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="qbt-Ts-A8F"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="appleSignInButton" destination="joa-fx-V61" id="ciD-Oz-mVn"/>
+                        <outlet property="backToLoginButton" destination="ilQ-5b-6HA" id="YmB-YD-CZN"/>
+                        <outlet property="createAccountButton" destination="94U-SB-frk" id="ynz-13-n9P"/>
+                        <outlet property="emailLabel" destination="oKq-kQ-poq" id="U4Z-nb-HdO"/>
+                        <outlet property="emailTextField" destination="i7W-Sg-WPs" id="W4y-oJ-rtJ"/>
+                        <outlet property="facebookSignInButton" destination="AJu-BL-SuG" id="Xvj-8n-n7N"/>
+                        <outlet property="forgotPasswordButton" destination="Li4-Uh-H6n" id="yjc-sD-k6S"/>
+                        <outlet property="forgotPasswordEmailLabel" destination="398-Eg-KXY" id="Z68-nw-dN2"/>
+                        <outlet property="forgotPasswordEmailTextField" destination="XHk-Fh-7KH" id="qPE-iT-ao3"/>
+                        <outlet property="forgotPasswordStackView" destination="QMT-hM-CIP" id="Nqz-ba-E9x"/>
+                        <outlet property="loadingView" destination="iYG-Dl-X2v" id="lEd-qe-iF2"/>
+                        <outlet property="loginButton" destination="Gts-4v-FYm" id="MWF-iW-vi5"/>
+                        <outlet property="loginStackView" destination="ivK-sR-CZ8" id="oxl-CW-CwC"/>
+                        <outlet property="orSeparatorLabel" destination="ir2-9v-JUi" id="Gay-FH-qTE"/>
+                        <outlet property="passwordLabel" destination="xog-q3-7b7" id="HMq-xj-HTu"/>
+                        <outlet property="passwordTextField" destination="QKD-tM-DgS" id="VjL-q2-6u2"/>
+                        <outlet property="resetPasswordButton" destination="gwW-gi-4wA" id="LTg-i1-bMB"/>
+                        <outlet property="spinnerImageView" destination="ZMd-5b-Aum" id="lEV-ph-5ZJ"/>
+                        <outlet property="twitterSignInButton" destination="o5H-Is-9so" id="NYd-3m-gHT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4o-ac-AjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple-button" width="1029" height="144"/>
+        <image name="facebook-button" width="1029" height="144"/>
+        <image name="google-button" width="1029" height="144"/>
+        <image name="main-logo" width="246" height="33.666667938232422"/>
+        <image name="spinner" width="128.33332824707031" height="128"/>
+        <image name="twitter-button" width="1082" height="144"/>
+        <namedColor name="GumroadBorderColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GumroadLabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GumroadTopViewColor">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

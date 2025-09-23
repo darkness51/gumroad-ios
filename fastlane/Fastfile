@@ -1,0 +1,50 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+before_all do  
+  skip_docs
+  clean_build_artifacts
+  clear_derived_data   
+  FileUtils::mkdir_p '../build'
+  sh "git log --pretty=format:'+ %s' -n 14 | grep -v 'Merge\\|release\\|Update circle\\|Update build' > ../build/change.log"
+end
+
+platform :ios do
+
+  lane :beta do
+    build_app(
+      workspace: "iOSBuyer.xcworkspace", 
+      scheme: "iOSBuyer", 
+      output_directory: "./build/",
+      configuration: "Release"
+    )
+    upload_to_testflight(
+      ipa: "./build/iOSBuyer.ipa", 
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  lane :refresh_dsyms do
+    download_dsyms(
+      version: "2020.1.18", 
+      build_number: "459"
+    )
+    upload_symbols_to_bugsnag
+    clean_build_artifacts
+  end
+  
+end

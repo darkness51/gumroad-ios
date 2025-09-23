@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Author"; ObjectID = "GsO-oB-Wmd"; */
+"GsO-oB-Wmd.text" = "Author";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T6r-Sl-DSb"; */
+"T6r-Sl-DSb.text" = "Label";
+
+/* Class = "UILabel"; text = "0:00"; ObjectID = "UE8-13-Bfw"; */
+"UE8-13-Bfw.text" = "0:00";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "Ur1-zF-DOn"; */
+"Ur1-zF-DOn.text" = "Product Name";
+
+/* Class = "UILabel"; text = "0:00"; ObjectID = "WUP-ZG-FaS"; */
+"WUP-ZG-FaS.text" = "0:00";
+
+/* Class = "UIBarButtonItem"; title = "1 of 15"; ObjectID = "Xky-Au-pZR"; */
+"Xky-Au-pZR.title" = "1 of 15";
+
+/* Class = "UILabel"; text = "Current Song"; ObjectID = "ap7-JF-14f"; */
+"ap7-JF-14f.text" = "Current Song";
+
+/* Class = "UICollectionViewController"; title = "Library"; ObjectID = "gF8-lH-LyW"; */
+"gF8-lH-LyW.title" = "Library";

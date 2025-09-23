@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mabry Pro.otf">
+            <string>MabryPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Discover View Controller-->
+        <scene sceneID="i6W-r2-VSz">
+            <objects>
+                <viewController storyboardIdentifier="DiscoverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uAk-VG-zeW" customClass="DiscoverViewController" customModule="Gumroad" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k36-hN-Ksp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-icon" translatesAutoresizingMaskIntoConstraints="NO" id="8l4-cf-Hmh">
+                                <rect key="frame" x="14" y="67" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="roI-6c-3ei"/>
+                                    <constraint firstAttribute="width" constant="24" id="tyz-ew-cMA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjB-wS-yLg">
+                                <rect key="frame" x="164.66666666666666" y="71" width="63.666666666666657" height="16"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                <color key="textColor" name="GumroadTitleLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYc-xU-wLF">
+                                <rect key="frame" x="355" y="67" width="24" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="gearshape.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="settingsButtonClicked:" destination="uAk-VG-zeW" eventType="touchUpInside" id="qer-25-fuY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WrX-75-SbW"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LjB-wS-yLg" firstAttribute="centerX" secondItem="WrX-75-SbW" secondAttribute="centerX" id="Ikh-TM-YUQ"/>
+                            <constraint firstItem="LjB-wS-yLg" firstAttribute="centerY" secondItem="8l4-cf-Hmh" secondAttribute="centerY" id="Say-vG-3xA"/>
+                            <constraint firstItem="8l4-cf-Hmh" firstAttribute="top" secondItem="WrX-75-SbW" secondAttribute="top" constant="8" id="Wdi-Bt-Ug4"/>
+                            <constraint firstItem="WrX-75-SbW" firstAttribute="trailing" secondItem="uYc-xU-wLF" secondAttribute="trailing" constant="14" id="g3a-SS-wv7"/>
+                            <constraint firstItem="uYc-xU-wLF" firstAttribute="height" secondItem="8l4-cf-Hmh" secondAttribute="height" id="iDT-XY-rLT"/>
+                            <constraint firstItem="8l4-cf-Hmh" firstAttribute="leading" secondItem="WrX-75-SbW" secondAttribute="leading" constant="14" id="lM8-T4-S0o"/>
+                            <constraint firstItem="uYc-xU-wLF" firstAttribute="width" secondItem="8l4-cf-Hmh" secondAttribute="width" id="oLU-cb-fK0"/>
+                            <constraint firstItem="uYc-xU-wLF" firstAttribute="centerY" secondItem="8l4-cf-Hmh" secondAttribute="centerY" id="wJz-TX-Qf3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="discoverTitleLabel" destination="LjB-wS-yLg" id="u7h-1R-qfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8W-yR-RZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="logo-icon" width="34" height="34"/>
+        <namedColor name="GumroadTitleLabelColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

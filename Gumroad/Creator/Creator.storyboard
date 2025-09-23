@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mabry Pro Bold.otf">
+            <string>MabryPro-Bold</string>
+        </array>
+        <array key="Mabry Pro.otf">
+            <string>MabryPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="06H-Hh-g6B">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0tv-Ce-mgc" customClass="HomeViewController" customModule="Gumroad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6S4-1d-Y4n">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-icon" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-mB-Xfw">
+                                <rect key="frame" x="14" y="126" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="7ri-vx-f9H"/>
+                                    <constraint firstAttribute="width" constant="24" id="IgO-RI-Niv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgs-aT-iNc">
+                                <rect key="frame" x="157" y="130" width="79" height="16"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgl-ox-xt6">
+                                <rect key="frame" x="355" y="126" width="24" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButtonClicked:" destination="0tv-Ce-mgc" eventType="touchUpInside" id="2ae-CD-OiQ"/>
+                                    <action selector="settingsButtonClicked:" destination="kQv-bp-Aww" eventType="touchUpInside" id="Gxn-Op-ABZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="search-btn-001">
+                                <rect key="frame" x="315" y="126" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Roz-YR-9Kd"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="discover-tab-unselected"/>
+                                <connections>
+                                    <action selector="searchButtonClicked:" destination="0tv-Ce-mgc" eventType="touchUpInside" id="search-btn-action-001"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-wC-dal">
+                                <rect key="frame" x="0.0" y="162" width="393" height="166"/>
+                                <subviews>
+                                    <searchBar hidden="YES" contentMode="scaleToFill" text="" translatesAutoresizingMaskIntoConstraints="NO" id="search-bar-001">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="0tv-Ce-mgc" id="search-bar-delegate-001"/>
+                                        </connections>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isT-k9-NQr">
+                                        <rect key="frame" x="196.66666666666666" y="32" width="0.0" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="aZJ-7H-UwJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="40"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RL-Om-Z6S">
+                                        <rect key="frame" x="196.66666666666666" y="78" width="0.0" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="hDQ-b5-3ur"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="luA-ib-jkx">
+                                        <rect key="frame" x="186.66666666666666" y="54" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rac-Az-Pii">
+                                        <rect key="frame" x="86" y="114" width="221" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wok-sT-gKL">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="62" id="51R-43-aDD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                <inset key="titleEdgeInsets" minX="2" minY="1" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Today" backgroundImage="header-tab-empty">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <state key="selected" title="Today" backgroundImage="header-tab">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="MOt-21-0u4"/>
+                                                    <action selector="datetabButtonClicked:" destination="0tv-Ce-mgc" eventType="touchUpInside" id="src-bT-nU0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHB-7N-wit">
+                                                <rect key="frame" x="72" y="0.0" width="67" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="67" id="Z9n-il-9RU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                <inset key="titleEdgeInsets" minX="2" minY="1" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Month" backgroundImage="header-tab-empty">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <state key="selected" title="Month" backgroundImage="header-tab">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="3DM-33-OkP"/>
+                                                    <action selector="datetabButtonClicked:" destination="0tv-Ce-mgc" eventType="touchUpInside" id="evL-KN-jz6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xw-t9-loi">
+                                                <rect key="frame" x="149" y="0.0" width="72" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="kbO-pG-rMG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                <inset key="titleEdgeInsets" minX="4" minY="1" maxX="2" maxY="0.0"/>
+                                                <state key="normal" title="All time" backgroundImage="header-tab-empty">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <state key="selected" title="All time" backgroundImage="header-tab">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="NWF-ri-j3m"/>
+                                                    <action selector="datetabButtonClicked:" destination="0tv-Ce-mgc" eventType="touchUpInside" id="svS-WF-FOd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="8ab-C7-Tug"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="GumroadTopViewColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="search-bar-001" secondAttribute="trailing" id="20C-Rj-mYI"/>
+                                    <constraint firstItem="luA-ib-jkx" firstAttribute="centerX" secondItem="G9V-wC-dal" secondAttribute="centerX" id="7bl-5Y-q1t"/>
+                                    <constraint firstItem="Rac-Az-Pii" firstAttribute="centerX" secondItem="G9V-wC-dal" secondAttribute="centerX" id="80f-K1-W6z"/>
+                                    <constraint firstItem="search-bar-001" firstAttribute="top" secondItem="G9V-wC-dal" secondAttribute="top" id="arR-6n-UNY"/>
+                                    <constraint firstItem="luA-ib-jkx" firstAttribute="bottom" secondItem="isT-k9-NQr" secondAttribute="bottom" id="eFJ-H6-vwO"/>
+                                    <constraint firstItem="isT-k9-NQr" firstAttribute="centerX" secondItem="G9V-wC-dal" secondAttribute="centerX" id="etI-Vk-h6L"/>
+                                    <constraint firstItem="search-bar-001" firstAttribute="leading" secondItem="G9V-wC-dal" secondAttribute="leading" id="kDH-TV-x8g"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rac-Az-Pii" secondAttribute="bottom" constant="16" id="kS0-Gh-Nbp"/>
+                                    <constraint firstItem="8RL-Om-Z6S" firstAttribute="centerX" secondItem="G9V-wC-dal" secondAttribute="centerX" id="kdZ-mx-jPA"/>
+                                    <constraint firstItem="isT-k9-NQr" firstAttribute="top" secondItem="G9V-wC-dal" secondAttribute="top" constant="32" id="nJX-YC-Jw4"/>
+                                    <constraint firstItem="Rac-Az-Pii" firstAttribute="top" secondItem="8RL-Om-Z6S" secondAttribute="bottom" constant="16" id="nxX-tB-u9f"/>
+                                    <constraint firstItem="8RL-Om-Z6S" firstAttribute="top" secondItem="isT-k9-NQr" secondAttribute="bottom" constant="4" id="xmX-Sx-cHF"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No sales found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no-sales-label-001">
+                                <rect key="frame" x="0.0" y="400" width="393" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                <color key="textColor" name="GumroadLabelColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" separatorInsetReference="fromAutomaticInsets" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-on-gmT">
+                                <rect key="frame" x="0.0" y="328" width="393" height="456"/>
+                                <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                <color key="separatorColor" name="GumroadBorderColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" name="GumroadBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductSaleTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductSaleTableViewCell" rowHeight="70" id="PDI-N4-gXq" customClass="ProductSaleTableViewCell" customModule="Gumroad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PDI-N4-gXq" id="vTQ-5u-ga9">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hs4-CT-93o">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="fa8-20-Do5"/>
+                                                        <constraint firstAttribute="height" constant="70" id="sX2-IS-hd2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YNs-5I-akc">
+                                                    <rect key="frame" x="86" y="16" width="291" height="21"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="GXj-Gz-P4k">
+                                                            <rect key="frame" x="0.0" y="0.0" width="259" height="21"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profit &amp; Loss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4T-et-M8S">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="21"/>
+                                                                    <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                                                    <color key="textColor" name="GumroadLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Refunded" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-Es-JIr">
+                                                                    <rect key="frame" x="92.666666666666657" y="0.0" width="43.333333333333343" height="21"/>
+                                                                    <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="10"/>
+                                                                    <color key="textColor" name="GumroadLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8Y-F8-qRf" userLabel="Spacer View">
+                                                                    <rect key="frame" x="142" y="0.0" width="117" height="21"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$40" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grR-lM-8jo">
+                                                            <rect key="frame" x="264" y="0.0" width="27" height="21"/>
+                                                            <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                                            <color key="textColor" name="GumroadLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Ixb-Iz-ZHQ"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lkk-60-oIK">
+                                                    <rect key="frame" x="86" y="41" width="291" height="14"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="johnsmith@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5U-sV-lII">
+                                                            <rect key="frame" x="0.0" y="0.0" width="229.33333333333334" height="14"/>
+                                                            <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="12"/>
+                                                            <color key="textColor" name="GumroadLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="3 days ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcu-es-RhD">
+                                                            <rect key="frame" x="234.33333333333329" y="0.0" width="56.666666666666657" height="14"/>
+                                                            <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="12"/>
+                                                            <color key="textColor" name="GumroadLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="v26-OA-5V1"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YNs-5I-akc" secondAttribute="trailing" constant="16" id="Ktv-ka-cXk"/>
+                                                <constraint firstItem="Hs4-CT-93o" firstAttribute="leading" secondItem="vTQ-5u-ga9" secondAttribute="leading" id="Nv1-gf-IWY"/>
+                                                <constraint firstItem="lkk-60-oIK" firstAttribute="top" secondItem="YNs-5I-akc" secondAttribute="bottom" constant="4" id="Vx7-6G-ts9"/>
+                                                <constraint firstItem="lkk-60-oIK" firstAttribute="trailing" secondItem="YNs-5I-akc" secondAttribute="trailing" id="aVe-BD-aiz"/>
+                                                <constraint firstItem="lkk-60-oIK" firstAttribute="leading" secondItem="YNs-5I-akc" secondAttribute="leading" id="bW0-C7-7Tq"/>
+                                                <constraint firstItem="YNs-5I-akc" firstAttribute="leading" secondItem="Hs4-CT-93o" secondAttribute="trailing" constant="16" id="esd-2M-HfO"/>
+                                                <constraint firstItem="YNs-5I-akc" firstAttribute="top" secondItem="vTQ-5u-ga9" secondAttribute="top" constant="16" id="g3M-OO-l8K"/>
+                                                <constraint firstAttribute="bottom" secondItem="Hs4-CT-93o" secondAttribute="bottom" id="j9y-Lp-Ghk"/>
+                                                <constraint firstItem="Hs4-CT-93o" firstAttribute="top" secondItem="vTQ-5u-ga9" secondAttribute="top" id="k4J-HV-3jN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="customerEmailLabel" destination="Z5U-sV-lII" id="e4z-bw-Qxg"/>
+                                            <outlet property="productImageView" destination="Hs4-CT-93o" id="54M-Rh-4Hn"/>
+                                            <outlet property="productNameLabel" destination="X4T-et-M8S" id="Y47-3n-pxS"/>
+                                            <outlet property="salePriceLabel" destination="grR-lM-8jo" id="osm-kT-Nkt"/>
+                                            <outlet property="tagLabel" destination="HtX-Es-JIr" id="R2G-MP-wOq"/>
+                                            <outlet property="timestampLabel" destination="Tcu-es-RhD" id="Wjh-pz-QyU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qLp-AL-M1S"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="search-btn-001" firstAttribute="bottom" secondItem="Lgl-ox-xt6" secondAttribute="bottom" id="1RM-c0-oBZ"/>
+                            <constraint firstItem="search-btn-001" firstAttribute="leading" secondItem="Bgs-aT-iNc" secondAttribute="trailing" constant="78.999999999999972" id="BME-98-g67"/>
+                            <constraint firstItem="qLp-AL-M1S" firstAttribute="bottom" secondItem="6dS-on-gmT" secondAttribute="bottom" id="DqR-T5-9W9"/>
+                            <constraint firstItem="Lgl-ox-xt6" firstAttribute="centerY" secondItem="zAq-mB-Xfw" secondAttribute="centerY" id="EsW-05-xfj"/>
+                            <constraint firstItem="Lgl-ox-xt6" firstAttribute="width" secondItem="zAq-mB-Xfw" secondAttribute="width" id="FN4-BX-4Bp"/>
+                            <constraint firstItem="qLp-AL-M1S" firstAttribute="trailing" secondItem="Lgl-ox-xt6" secondAttribute="trailing" constant="14" id="UdM-LN-BhJ"/>
+                            <constraint firstItem="G9V-wC-dal" firstAttribute="leading" secondItem="qLp-AL-M1S" secondAttribute="leading" id="VuV-GW-teA"/>
+                            <constraint firstItem="search-btn-001" firstAttribute="top" secondItem="Lgl-ox-xt6" secondAttribute="bottom" constant="-24" id="XKK-RK-RBC"/>
+                            <constraint firstItem="zAq-mB-Xfw" firstAttribute="top" secondItem="qLp-AL-M1S" secondAttribute="top" constant="8" id="Y73-Pw-9tP"/>
+                            <constraint firstItem="qLp-AL-M1S" firstAttribute="trailing" secondItem="G9V-wC-dal" secondAttribute="trailing" id="Z16-Zy-aUJ"/>
+                            <constraint firstItem="Lgl-ox-xt6" firstAttribute="leading" secondItem="search-btn-001" secondAttribute="trailing" constant="16" id="flU-4W-s7C"/>
+                            <constraint firstItem="Bgs-aT-iNc" firstAttribute="centerX" secondItem="qLp-AL-M1S" secondAttribute="centerX" id="gHq-s5-eCL"/>
+                            <constraint firstItem="G9V-wC-dal" firstAttribute="top" secondItem="Bgs-aT-iNc" secondAttribute="bottom" constant="16" id="iUG-Od-WHP"/>
+                            <constraint firstItem="Lgl-ox-xt6" firstAttribute="height" secondItem="zAq-mB-Xfw" secondAttribute="height" id="jsk-FB-1r5"/>
+                            <constraint firstItem="6dS-on-gmT" firstAttribute="top" secondItem="G9V-wC-dal" secondAttribute="bottom" id="nLC-P6-Hf5"/>
+                            <constraint firstItem="Bgs-aT-iNc" firstAttribute="centerY" secondItem="zAq-mB-Xfw" secondAttribute="centerY" id="njo-gM-jor"/>
+                            <constraint firstItem="zAq-mB-Xfw" firstAttribute="leading" secondItem="qLp-AL-M1S" secondAttribute="leading" constant="14" id="uCR-El-qwH"/>
+                            <constraint firstItem="6dS-on-gmT" firstAttribute="leading" secondItem="qLp-AL-M1S" secondAttribute="leading" id="wWB-J5-eS9"/>
+                            <constraint firstItem="qLp-AL-M1S" firstAttribute="trailing" secondItem="6dS-on-gmT" secondAttribute="trailing" id="xXD-U7-dR8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-tab-unselected" selectedImage="home-tab-selected" id="TwH-rr-aDh">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="luA-ib-jkx" id="phP-bK-XVb"/>
+                        <outlet property="customerLabel" destination="8RL-Om-Z6S" id="kqw-bE-arV"/>
+                        <outlet property="homeTitleLabel" destination="Bgs-aT-iNc" id="dUl-q7-IUC"/>
+                        <outlet property="noSalesLabel" destination="no-sales-label-001" id="GLE-qe-o6Z"/>
+                        <outlet property="revenueLabel" destination="isT-k9-NQr" id="wXY-AT-RVl"/>
+                        <outlet property="searchBar" destination="search-bar-001" id="lGf-k3-uuT"/>
+                        <outlet property="searchButton" destination="search-btn-001" id="2QL-ZR-tJC"/>
+                        <outlet property="stackView" destination="Rac-Az-Pii" id="SbZ-yg-9W8"/>
+                        <outlet property="tableView" destination="6dS-on-gmT" id="Hw5-zm-JM0"/>
+                        <outlet property="topView" destination="G9V-wC-dal" id="jO4-sV-JNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMJ-2I-hOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425.1908396946565" y="-899.29577464788736"/>
+        </scene>
+        <!--Analytics-->
+        <scene sceneID="okR-Jh-T84">
+            <objects>
+                <viewController storyboardIdentifier="AnalyticsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kQv-bp-Aww" customClass="AnalyticsViewController" customModule="Gumroad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fy-iv-MGW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-icon" translatesAutoresizingMaskIntoConstraints="NO" id="d4v-RE-oLo">
+                                <rect key="frame" x="14" y="126" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Rgd-Dj-uVl"/>
+                                    <constraint firstAttribute="height" constant="24" id="xQv-Rj-2ht"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analytics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-yO-Fxq">
+                                <rect key="frame" x="163" y="130" width="67.333333333333314" height="16"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="16"/>
+                                <color key="textColor" name="GumroadTitleLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-V1-gn2">
+                                <rect key="frame" x="355" y="126" width="24" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="gearshape.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="settingsButtonClicked:" destination="kQv-bp-Aww" eventType="touchUpInside" id="Gw1-Da-I4E"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5S-5c-1an">
+                                <rect key="frame" x="0.0" y="162" width="393" height="68"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e0B-p5-fEo">
+                                        <rect key="frame" x="130.66666666666666" y="16" width="131.99999999999997" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtf-t6-lkf">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="58" id="f0E-we-hjl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="titleEdgeInsets" minX="2" minY="1" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Sales" backgroundImage="header-tab-empty">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <state key="selected" title="Sales" backgroundImage="header-tab"/>
+                                                <connections>
+                                                    <action selector="headerButtonClicked:" destination="kQv-bp-Aww" eventType="touchUpInside" id="rQ3-7z-szs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGn-mb-hrp">
+                                                <rect key="frame" x="68" y="0.0" width="64" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="Rci-S1-a7a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="titleEdgeInsets" minX="3" minY="1" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Traffic" backgroundImage="header-tab-empty">
+                                                    <color key="titleColor" name="GumroadLabelColor"/>
+                                                </state>
+                                                <state key="selected" title="Traffic" backgroundImage="header-tab">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="headerButtonClicked:" destination="kQv-bp-Aww" eventType="touchUpInside" id="LSP-hf-nwg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Om5-cq-Ud8"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="GumroadTopViewColor"/>
+                                <constraints>
+                                    <constraint firstItem="e0B-p5-fEo" firstAttribute="top" secondItem="W5S-5c-1an" secondAttribute="top" constant="16" id="Pia-00-4AC"/>
+                                    <constraint firstItem="e0B-p5-fEo" firstAttribute="centerY" secondItem="W5S-5c-1an" secondAttribute="centerY" id="dIr-cK-9FP"/>
+                                    <constraint firstAttribute="bottom" secondItem="e0B-p5-fEo" secondAttribute="bottom" constant="16" id="wml-qc-yJG"/>
+                                    <constraint firstItem="e0B-p5-fEo" firstAttribute="centerX" secondItem="W5S-5c-1an" secondAttribute="centerX" id="zR5-E6-neF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ta-GC-unU">
+                                <rect key="frame" x="0.0" y="230" width="393" height="554"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ta7-JR-89O"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Ta-GC-unU" firstAttribute="top" secondItem="W5S-5c-1an" secondAttribute="bottom" id="0Kz-IY-Meb"/>
+                            <constraint firstItem="Aq7-yO-Fxq" firstAttribute="centerX" secondItem="ta7-JR-89O" secondAttribute="centerX" id="4Hk-4k-GA3"/>
+                            <constraint firstItem="4Ta-GC-unU" firstAttribute="leading" secondItem="ta7-JR-89O" secondAttribute="leading" id="8lA-13-AiE"/>
+                            <constraint firstItem="ta7-JR-89O" firstAttribute="leading" secondItem="d4v-RE-oLo" secondAttribute="leading" constant="-14" id="PMN-mX-Pd9"/>
+                            <constraint firstItem="Wrp-V1-gn2" firstAttribute="height" secondItem="d4v-RE-oLo" secondAttribute="height" id="U8W-Hk-e7V"/>
+                            <constraint firstItem="Aq7-yO-Fxq" firstAttribute="centerY" secondItem="d4v-RE-oLo" secondAttribute="centerY" id="W20-d2-jEo"/>
+                            <constraint firstItem="W5S-5c-1an" firstAttribute="trailing" secondItem="ta7-JR-89O" secondAttribute="trailing" id="ayI-4D-md6"/>
+                            <constraint firstItem="Wrp-V1-gn2" firstAttribute="width" secondItem="d4v-RE-oLo" secondAttribute="width" id="eST-p8-Aqt"/>
+                            <constraint firstItem="ta7-JR-89O" firstAttribute="trailing" secondItem="4Ta-GC-unU" secondAttribute="trailing" id="moe-5u-54C"/>
+                            <constraint firstItem="ta7-JR-89O" firstAttribute="leading" secondItem="W5S-5c-1an" secondAttribute="leading" id="pmc-53-EHx"/>
+                            <constraint firstItem="W5S-5c-1an" firstAttribute="top" secondItem="Aq7-yO-Fxq" secondAttribute="bottom" constant="16" id="s2e-Ph-LUQ"/>
+                            <constraint firstItem="ta7-JR-89O" firstAttribute="bottom" secondItem="4Ta-GC-unU" secondAttribute="bottom" id="vbf-Gs-icC"/>
+                            <constraint firstItem="ta7-JR-89O" firstAttribute="trailing" secondItem="Wrp-V1-gn2" secondAttribute="trailing" constant="14" id="wDR-zb-Vlv"/>
+                            <constraint firstItem="ta7-JR-89O" firstAttribute="top" secondItem="d4v-RE-oLo" secondAttribute="top" constant="-8" id="wEr-o5-S2P"/>
+                            <constraint firstItem="Wrp-V1-gn2" firstAttribute="centerY" secondItem="d4v-RE-oLo" secondAttribute="centerY" id="wtH-MY-Vct"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Analytics" image="analytics-tab-unselected" selectedImage="analytics-tab-selected" id="MmI-GX-Rkx">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="analyticsTitleLabel" destination="Aq7-yO-Fxq" id="iFb-Za-GvZ"/>
+                        <outlet property="headerSalesButton" destination="qtf-t6-lkf" id="IfW-Jb-4RL"/>
+                        <outlet property="headerTrafficButton" destination="QGn-mb-hrp" id="bBR-vh-zBD"/>
+                        <outlet property="mainView" destination="4Ta-GC-unU" id="UEH-NM-KUi"/>
+                        <outlet property="topView" destination="W5S-5c-1an" id="vTc-8L-Oz7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZQ-3M-U9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1426.0869565217392" y="-176.9021739130435"/>
+        </scene>
+        <!--Sales View Controller-->
+        <scene sceneID="3jK-N5-4aA">
+            <objects>
+                <viewController storyboardIdentifier="SalesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zlp-c1-7s5" customClass="SalesViewController" customModule="Gumroad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nug-zz-2HV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g7l-Jy-fmt">
+                                <rect key="frame" x="93.666666666666686" y="134" width="206" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqo-Hk-8Fg">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="K0H-g1-8LS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="3" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="1W" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="1W" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="9u6-1D-rLl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-qz-Gsy">
+                                        <rect key="frame" x="53.999999999999986" y="4" width="44" height="28"/>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="2" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="1M" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="1M" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="2cM-ju-0JG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09p-Ua-EHI">
+                                        <rect key="frame" x="108" y="4" width="44" height="28"/>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="2" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="1Y" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="1Y" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="idg-pi-cS0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdf-9N-4IP">
+                                        <rect key="frame" x="162" y="4" width="44" height="28"/>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="3" minY="2" maxX="3" maxY="0.0"/>
+                                        <state key="normal" title="All" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="All" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="eg7-F2-aOT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="YJV-CA-0Ay"/>
+                                </constraints>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uP6-ed-E7T">
+                                <rect key="frame" x="0.0" y="194" width="393" height="503"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-1w" translatesAutoresizingMaskIntoConstraints="NO" id="nDL-9O-hRK">
+                                        <rect key="frame" x="16" y="5" width="361" height="187.66666666666666"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Revenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1D-rk-fbR">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="20.666666666666668"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="GA3-Zs-HtC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU4-Qo-N2n">
+                                        <rect key="frame" x="16" y="32.666666666666657" width="361" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="HSc-hC-vjM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="40"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSW-TD-g2t">
+                                        <rect key="frame" x="166.66666666666663" y="4.6666666666666572" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="hYV-QJ-FPF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jux-bo-sX8">
+                                        <rect key="frame" x="166.66666666666663" y="32.666666666666657" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="V7L-NH-nmA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZd-nn-p0j" customClass="BarChartView" customModule="Gumroad">
+                                        <rect key="frame" x="16" y="82.666666666666686" width="361" height="120"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="ad9-nR-8d2">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFx-0W-AhN">
+                                        <rect key="frame" x="0.0" y="20.666666666666657" width="393" height="166"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5Sk-bn-K29">
+                                                <rect key="frame" x="113.66666666666667" y="73.000000000000028" width="165.66666666666663" height="20"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart-bar" translatesAutoresizingMaskIntoConstraints="NO" id="ERI-gT-CUS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="Fmp-Mw-ZyY"/>
+                                                            <constraint firstAttribute="height" constant="20" id="tqD-FK-Nyb"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No sales revenue... yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7de-1K-epc">
+                                                        <rect key="frame" x="25.999999999999986" y="3" width="139.66666666666663" height="14"/>
+                                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                        <color key="textColor" name="GumroadLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="5Sk-bn-K29" firstAttribute="centerY" secondItem="FFx-0W-AhN" secondAttribute="centerY" id="mCN-dR-RNE"/>
+                                            <constraint firstItem="5Sk-bn-K29" firstAttribute="centerX" secondItem="FFx-0W-AhN" secondAttribute="centerX" id="nhj-s1-g6O"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-1w" translatesAutoresizingMaskIntoConstraints="NO" id="ZDq-No-7Y8">
+                                        <rect key="frame" x="16" y="219.66666666666669" width="361" height="187.33333333333331"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-RY-ONb">
+                                        <rect key="frame" x="16" y="214.66666666666669" width="361" height="20.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="csJ-3N-2rj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olo-kJ-maF">
+                                        <rect key="frame" x="16" y="247" width="361" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="6nH-Pi-yi1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="40"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oc6-GQ-xs3">
+                                        <rect key="frame" x="166.66666666666663" y="219" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="yDS-Y9-ffK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoe-aF-J5z">
+                                        <rect key="frame" x="166.66666666666663" y="247" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="gCB-Rg-rWz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RET-kg-Nao" customClass="BarChartView" customModule="Gumroad">
+                                        <rect key="frame" x="16" y="297" width="361" height="120"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Syh-iA-4j1">
+                                        <rect key="frame" x="0.0" y="235" width="393" height="166"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-TZ-SiY">
+                                                <rect key="frame" x="140.33333333333334" y="73" width="112.33333333333334" height="20"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart-bar" translatesAutoresizingMaskIntoConstraints="NO" id="cDJ-2K-kFY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="icw-Za-u7D"/>
+                                                            <constraint firstAttribute="height" constant="20" id="yAD-B0-3XG"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No sales... yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZq-00-jIK">
+                                                        <rect key="frame" x="25.999999999999993" y="0.0" width="86.333333333333314" height="20"/>
+                                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                        <color key="textColor" name="GumroadLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ibp-TZ-SiY" firstAttribute="centerX" secondItem="Syh-iA-4j1" secondAttribute="centerX" id="KYq-z8-Dif"/>
+                                            <constraint firstItem="ibp-TZ-SiY" firstAttribute="centerY" secondItem="Syh-iA-4j1" secondAttribute="centerY" id="kt2-FX-bLD"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-1w" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-Oj-UD9">
+                                        <rect key="frame" x="16" y="434.00000000000006" width="361" height="187.66666666666669"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEe-ry-apT">
+                                        <rect key="frame" x="16" y="429" width="361" height="20.666666666666686"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="n2C-8D-2xn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZD-sp-r6d">
+                                        <rect key="frame" x="16" y="461.66666666666663" width="361" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="npq-aw-60d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="40"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5E-Vq-eR3">
+                                        <rect key="frame" x="166.66666666666663" y="433.66666666666663" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="u7J-3M-feM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gec-xy-9RZ">
+                                        <rect key="frame" x="166.66666666666663" y="461.66666666666663" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="lek-DN-LGM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DU1-RJ-rEg" customClass="BarChartView" customModule="Gumroad">
+                                        <rect key="frame" x="16" y="511.66666666666663" width="361" height="120"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-Mm-fqX">
+                                        <rect key="frame" x="0.0" y="449.66666666666663" width="393" height="166"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Qsx-Kd-iY2">
+                                                <rect key="frame" x="139.33333333333334" y="73" width="114.33333333333334" height="20"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart-bar" translatesAutoresizingMaskIntoConstraints="NO" id="H2n-na-TV4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="3Mi-gh-AZL"/>
+                                                            <constraint firstAttribute="width" constant="20" id="upa-gj-a8j"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No visits... yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXB-Ir-QP3">
+                                                        <rect key="frame" x="25.999999999999993" y="0.0" width="88.333333333333314" height="20"/>
+                                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                        <color key="textColor" name="GumroadLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Qsx-Kd-iY2" firstAttribute="centerX" secondItem="vhr-Mm-fqX" secondAttribute="centerX" id="gey-0F-aXg"/>
+                                            <constraint firstItem="Qsx-Kd-iY2" firstAttribute="centerY" secondItem="vhr-Mm-fqX" secondAttribute="centerY" id="moH-kF-ecj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Oc6-GQ-xs3" firstAttribute="leading" secondItem="xSW-TD-g2t" secondAttribute="leading" id="1bw-AR-Rq5"/>
+                                    <constraint firstItem="Aoe-aF-J5z" firstAttribute="leading" secondItem="Jux-bo-sX8" secondAttribute="leading" id="2DR-j2-zyb"/>
+                                    <constraint firstItem="jU4-Qo-N2n" firstAttribute="leading" secondItem="V1D-rk-fbR" secondAttribute="leading" id="2fp-Z8-aLO"/>
+                                    <constraint firstItem="FFx-0W-AhN" firstAttribute="top" secondItem="V1D-rk-fbR" secondAttribute="bottom" id="3LN-Hz-xmm"/>
+                                    <constraint firstItem="V1D-rk-fbR" firstAttribute="trailing" secondItem="RrV-9N-lxo" secondAttribute="trailing" constant="-16" id="3uB-Pt-gQF"/>
+                                    <constraint firstItem="XE9-RY-ONb" firstAttribute="trailing" secondItem="V1D-rk-fbR" secondAttribute="trailing" id="4co-1f-r9Y"/>
+                                    <constraint firstItem="E5E-Vq-eR3" firstAttribute="bottom" secondItem="WEe-ry-apT" secondAttribute="bottom" id="4vp-CN-EgU"/>
+                                    <constraint firstItem="DU1-RJ-rEg" firstAttribute="leading" secondItem="qZd-nn-p0j" secondAttribute="leading" id="531-zb-4xu"/>
+                                    <constraint firstItem="DU1-RJ-rEg" firstAttribute="bottom" secondItem="RrV-9N-lxo" secondAttribute="bottom" constant="-10" id="5SL-Pj-cbr"/>
+                                    <constraint firstItem="gec-xy-9RZ" firstAttribute="trailing" secondItem="Aoe-aF-J5z" secondAttribute="trailing" id="6X3-b6-IgO"/>
+                                    <constraint firstItem="nDL-9O-hRK" firstAttribute="top" secondItem="V1D-rk-fbR" secondAttribute="top" constant="5" id="6o9-5O-oNZ"/>
+                                    <constraint firstItem="WEe-ry-apT" firstAttribute="top" secondItem="RET-kg-Nao" secondAttribute="bottom" constant="12" id="8Wc-MH-dTh"/>
+                                    <constraint firstItem="Jux-bo-sX8" firstAttribute="top" secondItem="jU4-Qo-N2n" secondAttribute="top" id="9d0-BN-PTl"/>
+                                    <constraint firstItem="Syh-iA-4j1" firstAttribute="top" secondItem="XE9-RY-ONb" secondAttribute="bottom" id="C9z-Sn-RpV"/>
+                                    <constraint firstItem="vhr-Mm-fqX" firstAttribute="bottom" secondItem="DU1-RJ-rEg" secondAttribute="bottom" constant="-16" id="CAY-ha-sgw"/>
+                                    <constraint firstItem="RET-kg-Nao" firstAttribute="trailing" secondItem="qZd-nn-p0j" secondAttribute="trailing" id="EDO-qu-ZuS"/>
+                                    <constraint firstItem="WEe-ry-apT" firstAttribute="trailing" secondItem="V1D-rk-fbR" secondAttribute="trailing" id="Emb-A9-6GE"/>
+                                    <constraint firstItem="Oc6-GQ-xs3" firstAttribute="trailing" secondItem="xSW-TD-g2t" secondAttribute="trailing" id="Enj-Pq-45a"/>
+                                    <constraint firstItem="Aoe-aF-J5z" firstAttribute="trailing" secondItem="Jux-bo-sX8" secondAttribute="trailing" id="G2h-Jg-eDT"/>
+                                    <constraint firstItem="RET-kg-Nao" firstAttribute="leading" secondItem="qZd-nn-p0j" secondAttribute="leading" id="GDI-CH-3W4"/>
+                                    <constraint firstItem="olo-kJ-maF" firstAttribute="leading" secondItem="jU4-Qo-N2n" secondAttribute="leading" id="HSt-Eo-7cB"/>
+                                    <constraint firstItem="WEe-ry-apT" firstAttribute="leading" secondItem="V1D-rk-fbR" secondAttribute="leading" id="IKT-dX-dCV"/>
+                                    <constraint firstItem="olo-kJ-maF" firstAttribute="trailing" secondItem="jU4-Qo-N2n" secondAttribute="trailing" id="IMB-9B-X91"/>
+                                    <constraint firstItem="vhr-Mm-fqX" firstAttribute="top" secondItem="WEe-ry-apT" secondAttribute="bottom" id="K6B-t2-pD1"/>
+                                    <constraint firstItem="ZDq-No-7Y8" firstAttribute="bottom" secondItem="RET-kg-Nao" secondAttribute="bottom" constant="-10" id="KoK-jp-he0"/>
+                                    <constraint firstItem="FFx-0W-AhN" firstAttribute="bottom" secondItem="qZd-nn-p0j" secondAttribute="bottom" constant="-16" id="RVB-Qj-B3w"/>
+                                    <constraint firstItem="EZD-sp-r6d" firstAttribute="trailing" secondItem="V1D-rk-fbR" secondAttribute="trailing" id="SOh-Af-Nqh"/>
+                                    <constraint firstItem="gec-xy-9RZ" firstAttribute="top" secondItem="EZD-sp-r6d" secondAttribute="top" id="ZLr-pE-1lh"/>
+                                    <constraint firstItem="RET-kg-Nao" firstAttribute="top" secondItem="olo-kJ-maF" secondAttribute="bottom" constant="8" id="ZYu-Jn-3Vb"/>
+                                    <constraint firstItem="RrV-9N-lxo" firstAttribute="top" secondItem="V1D-rk-fbR" secondAttribute="top" id="axR-F2-aEa"/>
+                                    <constraint firstItem="Oc6-GQ-xs3" firstAttribute="bottom" secondItem="XE9-RY-ONb" secondAttribute="bottom" id="c9W-jn-7hV"/>
+                                    <constraint firstItem="Syh-iA-4j1" firstAttribute="bottom" secondItem="RET-kg-Nao" secondAttribute="bottom" constant="-16" id="d6b-hY-cgC"/>
+                                    <constraint firstItem="FvA-Oj-UD9" firstAttribute="bottom" secondItem="DU1-RJ-rEg" secondAttribute="bottom" constant="-10" id="e90-03-Cu5"/>
+                                    <constraint firstItem="V1D-rk-fbR" firstAttribute="bottom" secondItem="jU4-Qo-N2n" secondAttribute="top" constant="-12" id="eOS-b6-dZJ"/>
+                                    <constraint firstItem="xSW-TD-g2t" firstAttribute="leading" secondItem="Jux-bo-sX8" secondAttribute="leading" id="fk1-pl-TZI"/>
+                                    <constraint firstItem="RET-kg-Nao" firstAttribute="height" secondItem="qZd-nn-p0j" secondAttribute="height" id="gDi-Vi-Y1p"/>
+                                    <constraint firstItem="gec-xy-9RZ" firstAttribute="leading" secondItem="Aoe-aF-J5z" secondAttribute="leading" id="gwp-IX-gSK"/>
+                                    <constraint firstItem="DU1-RJ-rEg" firstAttribute="trailing" secondItem="qZd-nn-p0j" secondAttribute="trailing" id="iQc-vz-OG7"/>
+                                    <constraint firstItem="E5E-Vq-eR3" firstAttribute="trailing" secondItem="xSW-TD-g2t" secondAttribute="trailing" id="iwV-EL-km9"/>
+                                    <constraint firstItem="xSW-TD-g2t" firstAttribute="trailing" secondItem="Jux-bo-sX8" secondAttribute="trailing" id="khI-BO-ysL"/>
+                                    <constraint firstItem="E5E-Vq-eR3" firstAttribute="leading" secondItem="xSW-TD-g2t" secondAttribute="leading" id="lbr-oQ-p1t"/>
+                                    <constraint firstItem="V1D-rk-fbR" firstAttribute="leading" secondItem="RrV-9N-lxo" secondAttribute="leading" constant="16" id="o9T-t5-Sqn"/>
+                                    <constraint firstItem="ZDq-No-7Y8" firstAttribute="top" secondItem="XE9-RY-ONb" secondAttribute="top" constant="5" id="pVd-Ft-sjN"/>
+                                    <constraint firstItem="XE9-RY-ONb" firstAttribute="leading" secondItem="V1D-rk-fbR" secondAttribute="leading" id="qbc-Wv-DOT"/>
+                                    <constraint firstItem="Aoe-aF-J5z" firstAttribute="top" secondItem="olo-kJ-maF" secondAttribute="top" id="qgJ-9H-FWM"/>
+                                    <constraint firstItem="WEe-ry-apT" firstAttribute="top" secondItem="FvA-Oj-UD9" secondAttribute="top" constant="-5" id="qsQ-T2-X7M"/>
+                                    <constraint firstItem="xSW-TD-g2t" firstAttribute="bottom" secondItem="V1D-rk-fbR" secondAttribute="bottom" id="rES-dn-Zgc"/>
+                                    <constraint firstItem="nDL-9O-hRK" firstAttribute="bottom" secondItem="qZd-nn-p0j" secondAttribute="bottom" constant="-10" id="sQG-uT-YUx"/>
+                                    <constraint firstItem="EZD-sp-r6d" firstAttribute="leading" secondItem="V1D-rk-fbR" secondAttribute="leading" id="sTh-6Y-9Qt"/>
+                                    <constraint firstItem="EZD-sp-r6d" firstAttribute="top" secondItem="WEe-ry-apT" secondAttribute="bottom" constant="12" id="t31-rt-K9s"/>
+                                    <constraint firstItem="qZd-nn-p0j" firstAttribute="top" secondItem="jU4-Qo-N2n" secondAttribute="bottom" constant="8" id="tBR-Oj-mKE"/>
+                                    <constraint firstItem="XE9-RY-ONb" firstAttribute="top" secondItem="qZd-nn-p0j" secondAttribute="bottom" constant="12" id="vB9-Fx-rAT"/>
+                                    <constraint firstItem="jU4-Qo-N2n" firstAttribute="trailing" secondItem="V1D-rk-fbR" secondAttribute="trailing" id="vWa-NC-fvY"/>
+                                    <constraint firstItem="olo-kJ-maF" firstAttribute="top" secondItem="XE9-RY-ONb" secondAttribute="bottom" constant="12" id="wS3-sI-ZYr"/>
+                                    <constraint firstItem="DU1-RJ-rEg" firstAttribute="height" secondItem="qZd-nn-p0j" secondAttribute="height" id="wUE-3g-ti1"/>
+                                    <constraint firstItem="DU1-RJ-rEg" firstAttribute="top" secondItem="EZD-sp-r6d" secondAttribute="bottom" constant="8" id="xIK-en-ZH2"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RrV-9N-lxo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wgx-Uf-ofp"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CLX-CT-uxb"/>
+                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CLX-CT-uxb" firstAttribute="leading" secondItem="uP6-ed-E7T" secondAttribute="leading" id="5lp-wl-SVI"/>
+                            <constraint firstItem="nDL-9O-hRK" firstAttribute="leading" secondItem="qZd-nn-p0j" secondAttribute="leading" id="9AI-qa-v06"/>
+                            <constraint firstItem="ZDq-No-7Y8" firstAttribute="trailing" secondItem="RET-kg-Nao" secondAttribute="trailing" id="CdY-6E-yWS"/>
+                            <constraint firstItem="uP6-ed-E7T" firstAttribute="top" secondItem="g7l-Jy-fmt" secondAttribute="bottom" constant="24" id="EMs-JG-m7i"/>
+                            <constraint firstItem="CLX-CT-uxb" firstAttribute="trailing" secondItem="vhr-Mm-fqX" secondAttribute="trailing" id="EoD-6K-Vx1"/>
+                            <constraint firstItem="FFx-0W-AhN" firstAttribute="leading" secondItem="CLX-CT-uxb" secondAttribute="leading" id="Fwx-ww-6Iy"/>
+                            <constraint firstItem="qZd-nn-p0j" firstAttribute="leading" secondItem="CLX-CT-uxb" secondAttribute="leading" constant="16" id="Ikf-A7-gM3"/>
+                            <constraint firstItem="CLX-CT-uxb" firstAttribute="trailing" secondItem="FFx-0W-AhN" secondAttribute="trailing" id="LHh-L0-9MT"/>
+                            <constraint firstItem="qZd-nn-p0j" firstAttribute="trailing" secondItem="CLX-CT-uxb" secondAttribute="trailing" constant="-16" id="Lie-YJ-bLp"/>
+                            <constraint firstItem="FvA-Oj-UD9" firstAttribute="trailing" secondItem="DU1-RJ-rEg" secondAttribute="trailing" id="Rob-IH-ktV"/>
+                            <constraint firstItem="xSW-TD-g2t" firstAttribute="leading" secondItem="CLX-CT-uxb" secondAttribute="centerX" constant="-30" id="TtG-ti-zPj"/>
+                            <constraint firstItem="g7l-Jy-fmt" firstAttribute="top" secondItem="CLX-CT-uxb" secondAttribute="top" constant="16" id="Uly-pX-Van"/>
+                            <constraint firstItem="FvA-Oj-UD9" firstAttribute="leading" secondItem="DU1-RJ-rEg" secondAttribute="leading" id="VSZ-gI-WVD"/>
+                            <constraint firstItem="ZDq-No-7Y8" firstAttribute="leading" secondItem="RET-kg-Nao" secondAttribute="leading" id="Z4w-tP-LRU"/>
+                            <constraint firstItem="g7l-Jy-fmt" firstAttribute="centerX" secondItem="CLX-CT-uxb" secondAttribute="centerX" id="dB9-wb-BWb"/>
+                            <constraint firstItem="V1D-rk-fbR" firstAttribute="leading" secondItem="CLX-CT-uxb" secondAttribute="leading" constant="16" id="eD5-NP-tc9"/>
+                            <constraint firstItem="uP6-ed-E7T" firstAttribute="trailing" secondItem="CLX-CT-uxb" secondAttribute="trailing" id="kms-L0-mam"/>
+                            <constraint firstItem="Syh-iA-4j1" firstAttribute="leading" secondItem="CLX-CT-uxb" secondAttribute="leading" id="mcr-rF-M5M"/>
+                            <constraint firstItem="vhr-Mm-fqX" firstAttribute="leading" secondItem="CLX-CT-uxb" secondAttribute="leading" id="oQe-SR-05k"/>
+                            <constraint firstAttribute="bottom" secondItem="uP6-ed-E7T" secondAttribute="bottom" constant="155" id="qqV-ez-Cn3"/>
+                            <constraint firstItem="nDL-9O-hRK" firstAttribute="trailing" secondItem="qZd-nn-p0j" secondAttribute="trailing" id="tMH-1C-uUs"/>
+                            <constraint firstItem="CLX-CT-uxb" firstAttribute="trailing" secondItem="xSW-TD-g2t" secondAttribute="trailing" constant="16" id="uqD-Zw-AsK"/>
+                            <constraint firstItem="CLX-CT-uxb" firstAttribute="trailing" secondItem="Syh-iA-4j1" secondAttribute="trailing" id="wHp-I6-euh"/>
+                            <constraint firstItem="CLX-CT-uxb" firstAttribute="trailing" secondItem="V1D-rk-fbR" secondAttribute="trailing" constant="16" id="xDY-hJ-dL7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="salesBarChartView" destination="RET-kg-Nao" id="f7R-Im-11y"/>
+                        <outlet property="salesHighlightedDateLabel" destination="Oc6-GQ-xs3" id="CGY-oG-MXv"/>
+                        <outlet property="salesHighlightedLabel" destination="Aoe-aF-J5z" id="kZh-6M-fae"/>
+                        <outlet property="salesLabel" destination="olo-kJ-maF" id="GIE-ah-LgW"/>
+                        <outlet property="salesLoadingImageView" destination="ZDq-No-7Y8" id="AcE-hl-HQF"/>
+                        <outlet property="salesNoDataView" destination="Syh-iA-4j1" id="O81-5V-24u"/>
+                        <outlet property="salesRevenueBarChartView" destination="qZd-nn-p0j" id="lo0-pW-sdg"/>
+                        <outlet property="salesRevenueHighlightedDateLabel" destination="xSW-TD-g2t" id="oUa-3R-Myi"/>
+                        <outlet property="salesRevenueHighlightedLabel" destination="Jux-bo-sX8" id="p8s-9B-LxA"/>
+                        <outlet property="salesRevenueLabel" destination="jU4-Qo-N2n" id="JFj-Fk-s4C"/>
+                        <outlet property="salesRevenueLoadingImageView" destination="nDL-9O-hRK" id="GOx-bi-Nc1"/>
+                        <outlet property="salesRevenueNoDataView" destination="FFx-0W-AhN" id="PCE-wA-Vsu"/>
+                        <outlet property="scrollView" destination="uP6-ed-E7T" id="omL-8P-64K"/>
+                        <outlet property="stackView" destination="g7l-Jy-fmt" id="ShJ-Ie-JJa"/>
+                        <outlet property="viewsBarChartView" destination="DU1-RJ-rEg" id="av2-HJ-1Bz"/>
+                        <outlet property="viewsHighlightedDateLabel" destination="E5E-Vq-eR3" id="s0v-rh-feM"/>
+                        <outlet property="viewsHighlightedLabel" destination="gec-xy-9RZ" id="c7m-LE-AWu"/>
+                        <outlet property="viewsLabel" destination="EZD-sp-r6d" id="r4S-o5-FOR"/>
+                        <outlet property="viewsLoadingImageView" destination="FvA-Oj-UD9" id="Wul-Z8-h2y"/>
+                        <outlet property="viewsNoDataView" destination="vhr-Mm-fqX" id="u1G-Tp-6BY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hG3-61-RVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.68115942029" y="-176.9021739130435"/>
+        </scene>
+        <!--Traffic View Controller-->
+        <scene sceneID="gFC-it-6Oo">
+            <objects>
+                <viewController storyboardIdentifier="TrafficViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="exI-Uq-TvE" customClass="TrafficViewController" customModule="Gumroad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9WO-lc-edw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c5y-0M-sbk">
+                                <rect key="frame" x="93.666666666666686" y="134" width="206" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDa-jU-wtA">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="hZs-2Z-Cqa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="3" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="1W" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="1W" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="exI-Uq-TvE" eventType="touchUpInside" id="3hd-UB-1PQ"/>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="ud0-lF-z9F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBh-JU-SVI">
+                                        <rect key="frame" x="53.999999999999986" y="4" width="44" height="28"/>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="2" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="1M" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="1M" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="exI-Uq-TvE" eventType="touchUpInside" id="ebt-M7-LwA"/>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="yMf-WM-VSG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH7-DG-g1o">
+                                        <rect key="frame" x="108" y="4" width="44" height="28"/>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="2" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="1Y" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="1Y" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="aDV-KW-VgG"/>
+                                            <action selector="datetabButtonClicked:" destination="exI-Uq-TvE" eventType="touchUpInside" id="yDk-z8-OT7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-lk-17O">
+                                        <rect key="frame" x="162" y="4" width="44" height="28"/>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="3" minY="2" maxX="3" maxY="0.0"/>
+                                        <state key="normal" title="All" backgroundImage="header-tab-empty">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <state key="selected" title="All" backgroundImage="header-date-range-tab">
+                                            <color key="titleColor" name="GumroadLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="datetabButtonClicked:" destination="exI-Uq-TvE" eventType="touchUpInside" id="3dn-le-xCK"/>
+                                            <action selector="datetabButtonClicked:" destination="Zlp-c1-7s5" eventType="touchUpInside" id="JD7-op-UxZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="oH8-Wy-3Dd"/>
+                                </constraints>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TV1-sk-zIu">
+                                <rect key="frame" x="0.0" y="194" width="393" height="503"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-1w" translatesAutoresizingMaskIntoConstraints="NO" id="Pb5-Uu-viU">
+                                        <rect key="frame" x="16" y="-5" width="361" height="251"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traffic Revenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pa-Ib-PBK">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="Ys6-mG-egm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fe-Nb-FcM">
+                                        <rect key="frame" x="166.66666666666663" y="0.0" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="z6H-Fp-tI8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="MLF-w0-FRT">
+                                        <rect key="frame" x="16" y="20.666666666666686" width="180.66666666666666" height="904.33333333333326"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gzi-2l-Fd5">
+                                        <rect key="frame" x="231.66666666666663" y="204" width="145.33333333333337" height="200"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbU-rx-AND" customClass="BarChartView" customModule="Gumroad">
+                                        <rect key="frame" x="16" y="96" width="361" height="160"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="W7e-65-tqT">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                            </constraint>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5va-md-CNT">
+                                        <rect key="frame" x="0.0" y="16" width="393" height="224"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ukk-mY-K1T">
+                                                <rect key="frame" x="110.33333333333333" y="102" width="172.33333333333337" height="20"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart-bar" translatesAutoresizingMaskIntoConstraints="NO" id="QiS-I4-DDi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="S8K-dS-7Jd"/>
+                                                            <constraint firstAttribute="height" constant="20" id="qG6-Od-H5B"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No traffic revenue... yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRA-Ul-yhA">
+                                                        <rect key="frame" x="26.000000000000014" y="0.0" width="146.33333333333337" height="20"/>
+                                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                        <color key="textColor" name="GumroadLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ukk-mY-K1T" firstAttribute="centerX" secondItem="5va-md-CNT" secondAttribute="centerX" id="GVl-Oo-ebm"/>
+                                            <constraint firstItem="ukk-mY-K1T" firstAttribute="centerY" secondItem="5va-md-CNT" secondAttribute="centerY" id="iLh-rp-4Tp"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-1w" translatesAutoresizingMaskIntoConstraints="NO" id="B4z-1D-1kQ">
+                                        <rect key="frame" x="16" y="261" width="361" height="251"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOn-Ia-ewt">
+                                        <rect key="frame" x="16" y="266" width="361" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="2rx-g8-B06"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMc-gW-xzS">
+                                        <rect key="frame" x="166.66666666666663" y="266" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="XZC-JQ-2UO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="BkB-gN-pPh">
+                                        <rect key="frame" x="16" y="183" width="180.66666666666666" height="200"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Lka-cv-l6G">
+                                        <rect key="frame" x="231.66666666666663" y="204" width="145.33333333333337" height="200"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zht-Io-A0v" customClass="BarChartView" customModule="Gumroad">
+                                        <rect key="frame" x="16" y="362" width="361" height="160"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-Vg-762">
+                                        <rect key="frame" x="0.0" y="282" width="393" height="224"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="JFs-Qf-d0o">
+                                                <rect key="frame" x="139.33333333333334" y="102" width="114.33333333333334" height="20"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart-bar" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-Qj-LPJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="2Py-Yh-ATU"/>
+                                                            <constraint firstAttribute="width" constant="20" id="RVH-VM-JFM"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No visits... yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lax-ef-Ddu">
+                                                        <rect key="frame" x="25.999999999999993" y="0.0" width="88.333333333333314" height="20"/>
+                                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                        <color key="textColor" name="GumroadLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JFs-Qf-d0o" firstAttribute="centerX" secondItem="dxf-Vg-762" secondAttribute="centerX" id="t1G-iG-Szu"/>
+                                            <constraint firstItem="JFs-Qf-d0o" firstAttribute="centerY" secondItem="dxf-Vg-762" secondAttribute="centerY" id="zVd-E9-jY9"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading-1w" translatesAutoresizingMaskIntoConstraints="NO" id="TaW-Xw-zjc">
+                                        <rect key="frame" x="16" y="527" width="361" height="251"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6s-1V-SZg">
+                                        <rect key="frame" x="16" y="532" width="361" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="dno-nS-eQS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlu-gl-h0a">
+                                        <rect key="frame" x="166.66666666666663" y="532" width="210.33333333333337" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="eOP-S2-XaV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                        <color key="textColor" name="GumroadLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="9Wn-A3-FzF">
+                                        <rect key="frame" x="16" y="428" width="180.66666666666666" height="200"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J2U-20-J5i">
+                                        <rect key="frame" x="231.66666666666663" y="204" width="145.33333333333337" height="200"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-9a-D4X" customClass="BarChartView" customModule="Gumroad">
+                                        <rect key="frame" x="16" y="628" width="361" height="160"/>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB9-QG-B5W">
+                                        <rect key="frame" x="0.0" y="548" width="393" height="224"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-g3-eNa">
+                                                <rect key="frame" x="140.33333333333334" y="102" width="112.33333333333334" height="20"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart-bar" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-kD-EyQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="09b-FU-gcz"/>
+                                                            <constraint firstAttribute="height" constant="20" id="3Eo-FD-GGT"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No sales... yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4K-XR-dyE">
+                                                        <rect key="frame" x="25.999999999999993" y="0.0" width="86.333333333333314" height="20"/>
+                                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                                        <color key="textColor" name="GumroadLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="eDC-g3-eNa" firstAttribute="centerX" secondItem="TB9-QG-B5W" secondAttribute="centerX" id="4Aw-MC-Jk3"/>
+                                            <constraint firstItem="eDC-g3-eNa" firstAttribute="centerY" secondItem="TB9-QG-B5W" secondAttribute="centerY" id="ZnX-E1-dZk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Lka-cv-l6G" firstAttribute="top" secondItem="BkB-gN-pPh" secondAttribute="top" id="1LS-Gm-QDn"/>
+                                    <constraint firstItem="2fe-Nb-FcM" firstAttribute="firstBaseline" secondItem="5Pa-Ib-PBK" secondAttribute="firstBaseline" id="39H-ba-Jr0"/>
+                                    <constraint firstItem="Gzi-2l-Fd5" firstAttribute="top" secondItem="MLF-w0-FRT" secondAttribute="top" id="4kv-dD-rWF"/>
+                                    <constraint firstItem="ndd-9a-D4X" firstAttribute="top" secondItem="c6s-1V-SZg" secondAttribute="bottom" constant="80" id="4nf-hG-gJG"/>
+                                    <constraint firstItem="wlu-gl-h0a" firstAttribute="firstBaseline" secondItem="c6s-1V-SZg" secondAttribute="firstBaseline" id="5Sm-DV-EVP"/>
+                                    <constraint firstItem="9Wn-A3-FzF" firstAttribute="leading" secondItem="ndd-9a-D4X" secondAttribute="leading" id="5nd-NF-agC"/>
+                                    <constraint firstItem="TaW-Xw-zjc" firstAttribute="leading" secondItem="Pb5-Uu-viU" secondAttribute="leading" id="6KK-1k-eWa"/>
+                                    <constraint firstItem="Lka-cv-l6G" firstAttribute="leading" secondItem="Gzi-2l-Fd5" secondAttribute="leading" id="9Rl-E7-vkS"/>
+                                    <constraint firstItem="SOn-Ia-ewt" firstAttribute="leading" secondItem="5Pa-Ib-PBK" secondAttribute="leading" id="9XY-HP-uy0"/>
+                                    <constraint firstItem="ndd-9a-D4X" firstAttribute="leading" secondItem="EbU-rx-AND" secondAttribute="leading" id="9qg-D2-NjH"/>
+                                    <constraint firstItem="JMc-gW-xzS" firstAttribute="leading" secondItem="2fe-Nb-FcM" secondAttribute="leading" id="B9N-lD-Khj"/>
+                                    <constraint firstItem="BkB-gN-pPh" firstAttribute="top" secondItem="SOn-Ia-ewt" secondAttribute="bottom" constant="12" id="Ddu-dg-BaO"/>
+                                    <constraint firstItem="Pb5-Uu-viU" firstAttribute="bottom" secondItem="EbU-rx-AND" secondAttribute="bottom" constant="-10" id="EEV-ac-aYW"/>
+                                    <constraint firstItem="zht-Io-A0v" firstAttribute="trailing" secondItem="EbU-rx-AND" secondAttribute="trailing" id="GkR-QQ-OjS"/>
+                                    <constraint firstItem="B4z-1D-1kQ" firstAttribute="leading" secondItem="Pb5-Uu-viU" secondAttribute="leading" id="H1P-3g-A13"/>
+                                    <constraint firstItem="SOn-Ia-ewt" firstAttribute="top" secondItem="EbU-rx-AND" secondAttribute="bottom" constant="10" id="HlU-97-Ci6"/>
+                                    <constraint firstItem="9Wn-A3-FzF" firstAttribute="top" secondItem="c6s-1V-SZg" secondAttribute="bottom" constant="12" id="JLU-LC-Ktv"/>
+                                    <constraint firstItem="B4z-1D-1kQ" firstAttribute="bottom" secondItem="zht-Io-A0v" secondAttribute="bottom" constant="-10" id="Mop-hs-AFF"/>
+                                    <constraint firstItem="TaW-Xw-zjc" firstAttribute="trailing" secondItem="Pb5-Uu-viU" secondAttribute="trailing" id="Mxd-BG-1Nu"/>
+                                    <constraint firstItem="dxf-Vg-762" firstAttribute="top" secondItem="SOn-Ia-ewt" secondAttribute="bottom" id="N6j-dM-Odj"/>
+                                    <constraint firstItem="wlu-gl-h0a" firstAttribute="trailing" secondItem="2fe-Nb-FcM" secondAttribute="trailing" id="NWs-g5-8vh"/>
+                                    <constraint firstItem="zht-Io-A0v" firstAttribute="height" secondItem="EbU-rx-AND" secondAttribute="height" id="Pcy-9e-evK"/>
+                                    <constraint firstItem="Lka-cv-l6G" firstAttribute="trailing" secondItem="Gzi-2l-Fd5" secondAttribute="trailing" id="S92-Bt-N0d"/>
+                                    <constraint firstItem="ndd-9a-D4X" firstAttribute="height" secondItem="EbU-rx-AND" secondAttribute="height" id="SI4-Ac-Iau"/>
+                                    <constraint firstItem="5Pa-Ib-PBK" firstAttribute="trailing" secondItem="JnI-ej-1oo" secondAttribute="trailing" constant="-16" id="SnN-r7-OjS"/>
+                                    <constraint firstItem="TaW-Xw-zjc" firstAttribute="bottom" secondItem="ndd-9a-D4X" secondAttribute="bottom" constant="-10" id="SwU-Pd-WYN"/>
+                                    <constraint firstItem="TB9-QG-B5W" firstAttribute="top" secondItem="c6s-1V-SZg" secondAttribute="bottom" id="T7p-4S-X66"/>
+                                    <constraint firstItem="JMc-gW-xzS" firstAttribute="trailing" secondItem="2fe-Nb-FcM" secondAttribute="trailing" id="TKe-qG-QWo"/>
+                                    <constraint firstItem="ndd-9a-D4X" firstAttribute="trailing" secondItem="EbU-rx-AND" secondAttribute="trailing" id="Xot-bW-OMF"/>
+                                    <constraint firstItem="dxf-Vg-762" firstAttribute="bottom" secondItem="zht-Io-A0v" secondAttribute="bottom" constant="-16" id="Z1U-mx-30H"/>
+                                    <constraint firstItem="EbU-rx-AND" firstAttribute="trailing" secondItem="2fe-Nb-FcM" secondAttribute="trailing" id="c4Q-5P-uLn"/>
+                                    <constraint firstItem="Pb5-Uu-viU" firstAttribute="top" secondItem="5Pa-Ib-PBK" secondAttribute="top" constant="-5" id="dXU-ha-QyX"/>
+                                    <constraint firstItem="B4z-1D-1kQ" firstAttribute="trailing" secondItem="Pb5-Uu-viU" secondAttribute="trailing" id="fHo-Wg-Tmr"/>
+                                    <constraint firstItem="c6s-1V-SZg" firstAttribute="leading" secondItem="5Pa-Ib-PBK" secondAttribute="leading" id="fkp-6i-4Ha"/>
+                                    <constraint firstItem="c6s-1V-SZg" firstAttribute="trailing" secondItem="5Pa-Ib-PBK" secondAttribute="trailing" id="g6y-2d-IQ5"/>
+                                    <constraint firstItem="SOn-Ia-ewt" firstAttribute="trailing" secondItem="5Pa-Ib-PBK" secondAttribute="trailing" id="gIV-lt-aen"/>
+                                    <constraint firstItem="zht-Io-A0v" firstAttribute="leading" secondItem="EbU-rx-AND" secondAttribute="leading" id="gaP-Zz-tua"/>
+                                    <constraint firstItem="zht-Io-A0v" firstAttribute="top" secondItem="SOn-Ia-ewt" secondAttribute="bottom" constant="80" id="l0k-dF-m3h"/>
+                                    <constraint firstItem="J2U-20-J5i" firstAttribute="leading" secondItem="Gzi-2l-Fd5" secondAttribute="leading" id="l1p-1p-fg5"/>
+                                    <constraint firstItem="MLF-w0-FRT" firstAttribute="leading" secondItem="EbU-rx-AND" secondAttribute="leading" id="ldq-e3-hou"/>
+                                    <constraint firstItem="J2U-20-J5i" firstAttribute="trailing" secondItem="Gzi-2l-Fd5" secondAttribute="trailing" id="nEg-cJ-lOD"/>
+                                    <constraint firstItem="JMc-gW-xzS" firstAttribute="firstBaseline" secondItem="SOn-Ia-ewt" secondAttribute="firstBaseline" id="nGT-5k-Lnl"/>
+                                    <constraint firstItem="5va-md-CNT" firstAttribute="top" secondItem="5Pa-Ib-PBK" secondAttribute="bottom" id="nQr-Z3-NEb"/>
+                                    <constraint firstItem="MLF-w0-FRT" firstAttribute="top" secondItem="5Pa-Ib-PBK" secondAttribute="bottom" constant="12" id="oLm-bx-hv7"/>
+                                    <constraint firstItem="EbU-rx-AND" firstAttribute="top" secondItem="5Pa-Ib-PBK" secondAttribute="bottom" constant="80" id="ogU-kN-KMS"/>
+                                    <constraint firstItem="ndd-9a-D4X" firstAttribute="bottom" secondItem="JnI-ej-1oo" secondAttribute="bottom" constant="-10" id="qNi-KG-wwL"/>
+                                    <constraint firstItem="B4z-1D-1kQ" firstAttribute="top" secondItem="SOn-Ia-ewt" secondAttribute="top" constant="-5" id="sMg-vo-b2h"/>
+                                    <constraint firstItem="Gzi-2l-Fd5" firstAttribute="trailing" secondItem="2fe-Nb-FcM" secondAttribute="trailing" id="tDZ-b1-tnd"/>
+                                    <constraint firstItem="J2U-20-J5i" firstAttribute="top" secondItem="9Wn-A3-FzF" secondAttribute="top" id="tiz-iK-xIU"/>
+                                    <constraint firstItem="wlu-gl-h0a" firstAttribute="leading" secondItem="2fe-Nb-FcM" secondAttribute="leading" id="uBJ-gO-oGs"/>
+                                    <constraint firstItem="BkB-gN-pPh" firstAttribute="leading" secondItem="zht-Io-A0v" secondAttribute="leading" id="uVr-sR-VGh"/>
+                                    <constraint firstItem="JnI-ej-1oo" firstAttribute="top" secondItem="5Pa-Ib-PBK" secondAttribute="top" id="uiK-lV-OyL"/>
+                                    <constraint firstItem="TB9-QG-B5W" firstAttribute="bottom" secondItem="ndd-9a-D4X" secondAttribute="bottom" constant="-16" id="vI7-4m-sCj"/>
+                                    <constraint firstItem="c6s-1V-SZg" firstAttribute="top" secondItem="TaW-Xw-zjc" secondAttribute="top" constant="5" id="vrf-PE-Sv4"/>
+                                    <constraint firstItem="5Pa-Ib-PBK" firstAttribute="leading" secondItem="JnI-ej-1oo" secondAttribute="leading" constant="16" id="w2w-gU-iu1"/>
+                                    <constraint firstItem="c6s-1V-SZg" firstAttribute="top" secondItem="zht-Io-A0v" secondAttribute="bottom" constant="10" id="x7m-yF-jAG"/>
+                                    <constraint firstItem="5va-md-CNT" firstAttribute="bottom" secondItem="EbU-rx-AND" secondAttribute="bottom" constant="-16" id="yb2-fq-J49"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="JnI-ej-1oo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5Rt-w5-ewh"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vjt-gK-nUp"/>
+                        <color key="backgroundColor" name="GumroadBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pb5-Uu-viU" firstAttribute="trailing" secondItem="EbU-rx-AND" secondAttribute="trailing" id="2AA-sj-5q2"/>
+                            <constraint firstItem="2fe-Nb-FcM" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="centerX" constant="-30" id="2oe-9J-NfK"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="trailing" secondItem="TV1-sk-zIu" secondAttribute="trailing" id="3Ri-mD-0Vo"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="trailing" secondItem="TB9-QG-B5W" secondAttribute="trailing" id="7TS-RL-4xp"/>
+                            <constraint firstItem="5Pa-Ib-PBK" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="leading" constant="16" id="Axv-ct-nBc"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="centerX" secondItem="MLF-w0-FRT" secondAttribute="trailing" id="Bqq-lb-hO0"/>
+                            <constraint firstItem="Pb5-Uu-viU" firstAttribute="leading" secondItem="EbU-rx-AND" secondAttribute="leading" id="DI9-Gq-BFP"/>
+                            <constraint firstItem="dxf-Vg-762" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="leading" id="DlI-Ny-EY0"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="trailing" secondItem="5va-md-CNT" secondAttribute="trailing" id="EMc-1c-wzs"/>
+                            <constraint firstItem="c5y-0M-sbk" firstAttribute="bottom" secondItem="TV1-sk-zIu" secondAttribute="top" constant="-24" id="Fzd-9f-Vxq"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="centerX" secondItem="BkB-gN-pPh" secondAttribute="trailing" id="T6B-6t-oSM"/>
+                            <constraint firstItem="c5y-0M-sbk" firstAttribute="top" secondItem="Vjt-gK-nUp" secondAttribute="top" constant="16" id="Xih-X2-RMc"/>
+                            <constraint firstItem="TB9-QG-B5W" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="leading" id="bwN-yi-EUy"/>
+                            <constraint firstItem="5va-md-CNT" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="leading" id="ccC-fe-o14"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="trailing" secondItem="dxf-Vg-762" secondAttribute="trailing" id="cca-bK-Oqg"/>
+                            <constraint firstItem="Gzi-2l-Fd5" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="centerX" constant="35" id="cqj-6o-yT1"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="centerX" secondItem="9Wn-A3-FzF" secondAttribute="trailing" id="gPu-HF-dI5"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="trailing" secondItem="5Pa-Ib-PBK" secondAttribute="trailing" constant="16" id="kPX-lt-Y5J"/>
+                            <constraint firstItem="TV1-sk-zIu" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="leading" id="lXR-Af-4Pu"/>
+                            <constraint firstAttribute="bottom" secondItem="TV1-sk-zIu" secondAttribute="bottom" constant="155" id="n7z-sI-HBs"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="trailing" secondItem="2fe-Nb-FcM" secondAttribute="trailing" constant="16" id="qh6-0w-8O2"/>
+                            <constraint firstItem="Vjt-gK-nUp" firstAttribute="trailing" secondItem="EbU-rx-AND" secondAttribute="trailing" constant="16" id="uKL-bk-cYg"/>
+                            <constraint firstItem="EbU-rx-AND" firstAttribute="leading" secondItem="Vjt-gK-nUp" secondAttribute="leading" constant="16" id="wwg-yn-G81"/>
+                            <constraint firstItem="c5y-0M-sbk" firstAttribute="centerX" secondItem="Vjt-gK-nUp" secondAttribute="centerX" id="zMh-Vf-MYD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="revenueBarChartView" destination="EbU-rx-AND" id="2Jz-JI-wKI"/>
+                        <outlet property="revenueHighlightedDateLabel" destination="2fe-Nb-FcM" id="0lS-H4-azW"/>
+                        <outlet property="revenueHighlightedLegendStackView" destination="Gzi-2l-Fd5" id="bEG-ll-K9i"/>
+                        <outlet property="revenueLegendStackView" destination="MLF-w0-FRT" id="nE8-NU-fYD"/>
+                        <outlet property="revenueLoadingImageView" destination="Pb5-Uu-viU" id="Cgw-ly-Ynb"/>
+                        <outlet property="revenueNoDataView" destination="5va-md-CNT" id="8it-Qf-1gH"/>
+                        <outlet property="salesBarChartView" destination="ndd-9a-D4X" id="up2-kp-yK7"/>
+                        <outlet property="salesHighlightedDateLabel" destination="wlu-gl-h0a" id="dMR-Fs-Qgt"/>
+                        <outlet property="salesHighlightedLegendStackView" destination="J2U-20-J5i" id="Zrw-is-RJx"/>
+                        <outlet property="salesLegendStackView" destination="9Wn-A3-FzF" id="nwy-xo-YS3"/>
+                        <outlet property="salesLoadingImageView" destination="TaW-Xw-zjc" id="tfl-xj-l5e"/>
+                        <outlet property="salesNoDataView" destination="TB9-QG-B5W" id="TeQ-Tq-wkl"/>
+                        <outlet property="scrollView" destination="TV1-sk-zIu" id="zAR-i1-eEz"/>
+                        <outlet property="stackView" destination="c5y-0M-sbk" id="uvc-cW-fKx"/>
+                        <outlet property="visitsBarChartView" destination="zht-Io-A0v" id="tEy-Ss-eId"/>
+                        <outlet property="visitsHighlightedDateLabel" destination="JMc-gW-xzS" id="VKl-6z-RPb"/>
+                        <outlet property="visitsHighlightedLegendStackView" destination="Lka-cv-l6G" id="BoV-rF-j6J"/>
+                        <outlet property="visitsLegendStackView" destination="BkB-gN-pPh" id="rc4-Ri-tjt"/>
+                        <outlet property="visitsLoadingImageView" destination="B4z-1D-1kQ" id="kte-8m-emS"/>
+                        <outlet property="visitsNoDataView" destination="dxf-Vg-762" id="PC2-z2-hfu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHv-H8-Tci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2952.1739130434785" y="-176.08695652173915"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="analytics-tab-selected" width="20.333333969116211" height="20"/>
+        <image name="analytics-tab-unselected" width="20.333333969116211" height="20"/>
+        <image name="chart-bar" width="20.333333969116211" height="20"/>
+        <image name="discover-tab-unselected" width="19" height="19"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="header-date-range-tab" width="44.333332061767578" height="36"/>
+        <image name="header-tab" width="62.333332061767578" height="36"/>
+        <image name="header-tab-empty" width="64" height="28"/>
+        <image name="home-tab-selected" width="20.333333969116211" height="20"/>
+        <image name="home-tab-unselected" width="20.333333969116211" height="20"/>
+        <image name="loading-1w" width="2058" height="1080"/>
+        <image name="logo-icon" width="34" height="34"/>
+        <namedColor name="GumroadBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GumroadBorderColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GumroadLabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GumroadTitleLabelColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GumroadTopViewColor">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

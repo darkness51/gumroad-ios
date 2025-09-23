@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widgetkit-extension</string>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mabry Pro.otf</string>
+		<string>Mabry Pro Medium.otf</string>
+		<string>Mabry Pro Medium Italic.otf</string>
+		<string>Mabry Pro Light.otf</string>
+		<string>Mabry Pro Light Italic.otf</string>
+		<string>Mabry Pro Italic.otf</string>
+		<string>Mabry Pro Bold.otf</string>
+		<string>Mabry Pro Bold Italic.otf</string>
+		<string>Mabry Pro Black.otf</string>
+		<string>Mabry Pro Black Italic.otf</string>
+	</array>
+	<key>API_URL</key>
+	<string>$(API_URL)</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Gumroad Widget</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>OAUTH_CLIENT_ID</key>
+	<string>$(OAUTH_CLIENT_ID)</string>
+	<key>OAUTH_SECRET_ID</key>
+	<string>$(OAUTH_SECRET_ID)</string>
+	<key>ROOT_URL</key>
+	<string>$(ROOT_URL)</string>
+	<key>MOBILE_TOKEN</key>
+	<string>$(MOBILE_TOKEN)</string>
+</dict>
+</plist>

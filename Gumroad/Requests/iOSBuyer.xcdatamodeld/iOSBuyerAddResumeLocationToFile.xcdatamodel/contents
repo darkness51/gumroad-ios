@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G115" minimumToolsVersion="Xcode 4.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="File" representedClassName="File" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="download_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="external_id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="filegroup" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filetype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="local_file_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="resume_location" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="streaming_url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="files" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Product" representedClassName="Product" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="creator_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_loading" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="last_successful_sync" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="preview_height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="preview_oembed_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preview_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preview_width" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="product_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique_permalink" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="url_redirect_external_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url_redirect_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="files" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="File" inverseName="product" inverseEntity="File" syncable="YES"/>
+    </entity>
+</model>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mabry Pro Bold.otf">
+            <string>MabryPro-Bold</string>
+        </array>
+        <array key="Mabry Pro.otf">
+            <string>MabryPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="PostTableViewCell" rowHeight="77" id="5fn-rJ-jmB" customClass="PostTableViewCell" customModule="iOSBuyer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="999" verticalCompressionResistancePriority="1" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5fn-rJ-jmB" id="88i-31-ntQ">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="file-ebook" translatesAutoresizingMaskIntoConstraints="NO" id="die-bY-Cro">
+                        <rect key="frame" x="16" y="16" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Uqa-aa-8oP"/>
+                            <constraint firstAttribute="width" secondItem="die-bY-Cro" secondAttribute="height" id="iIl-4q-Vgk"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="An1-ez-P6R">
+                        <rect key="frame" x="382" y="26.5" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="jrm-Lj-0Dc"/>
+                            <constraint firstAttribute="width" secondItem="An1-ez-P6R" secondAttribute="height" id="zNc-Nd-DnQ"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zW2-FK-mZS">
+                        <rect key="frame" x="48" y="18" width="318" height="43"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Introducing Gumroad Memberships" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiF-0A-aRh">
+                                <rect key="frame" x="0.0" y="0.0" width="318" height="16"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Bold" family="Mabry Pro" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="December 10, 2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEg-PQ-s28">
+                                <rect key="frame" x="0.0" y="29" width="318" height="14"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="An1-ez-P6R" secondAttribute="trailing" constant="16" id="8vv-Kt-xeV"/>
+                    <constraint firstItem="die-bY-Cro" firstAttribute="top" secondItem="88i-31-ntQ" secondAttribute="top" constant="16" id="F6k-H9-pav"/>
+                    <constraint firstItem="zW2-FK-mZS" firstAttribute="trailing" secondItem="An1-ez-P6R" secondAttribute="leading" constant="-16" id="Iqi-n6-VHS"/>
+                    <constraint firstItem="An1-ez-P6R" firstAttribute="centerY" secondItem="88i-31-ntQ" secondAttribute="centerY" id="TiA-m9-khr"/>
+                    <constraint firstAttribute="bottom" secondItem="zW2-FK-mZS" secondAttribute="bottom" constant="16" id="c6j-xz-qLX"/>
+                    <constraint firstItem="die-bY-Cro" firstAttribute="leading" secondItem="88i-31-ntQ" secondAttribute="leading" constant="16" id="gsb-bn-0XF"/>
+                    <constraint firstItem="zW2-FK-mZS" firstAttribute="top" secondItem="88i-31-ntQ" secondAttribute="top" constant="18" id="huQ-pu-IaD"/>
+                    <constraint firstItem="zW2-FK-mZS" firstAttribute="leading" secondItem="die-bY-Cro" secondAttribute="trailing" constant="8" id="u3x-in-oug"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="dateLabel" destination="tEg-PQ-s28" id="LPG-nN-Npq"/>
+                <outlet property="nameLabel" destination="uiF-0A-aRh" id="YXr-ZU-vFZ"/>
+            </connections>
+            <point key="canvasLocation" x="40.579710144927539" y="-259.48660714285711"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="24" height="24"/>
+        <image name="file-ebook" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,17 @@
+language: objective-c
+before_install:
+    - brew update
+    - brew uninstall xctool
+    - brew install xctool --build-from-source
+env:
+  matrix:
+  - DESTINATION='platform=iOS Simulator,OS=8.0,name=iPhone 6'
+  - DESTINATION='platform=iOS Simulator,OS=7.1,name=iPhone 4s'
+  - DESTINATION='platform=iOS Simulator,OS=8.0,name=iPhone 4s'
+  - DESTINATION='platform=iOS Simulator,OS=7.1,name=iPhone 5s'
+  - DESTINATION='platform=iOS Simulator,OS=8.0,name=iPhone 5s'
+script: "xctool test -workspace iOSBuyer.xcworkspace -scheme AcceptanceTests -sdk iphonesimulator -destination \"$DESTINATION\""
+notifications:
+  hipchat:
+    rooms:
+      secure: dummy-key

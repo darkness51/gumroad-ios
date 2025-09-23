@@ -1,0 +1,18 @@
+//
+//  Staging.xcconfig
+//  iOSCreator
+//
+//  Created by Matthew Whittaker on 12/11/19.
+//  Copyright © 2019 GRD. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-Gumroad/Pods-Gumroad.staging.xcconfig"
+#include "Credentials/Staging.xcconfig"
+
+ROOT_URL = https:/$()/staging.gumroad.com
+API_URL = https:/$()/api.staging.gumroad.com/mobile
+
+APP_NAME = Gumroad-stage
