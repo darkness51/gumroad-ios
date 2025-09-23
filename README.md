@@ -55,7 +55,7 @@ If you are on Apple silicon, run Xcode using Rosetta:
 
 You can also use `Cmd+R` shortcut to build + run the project.
 
-### Connecting to the locally running [gumroad/web](https://github.com/gumroad/web) server
+### Connecting to the locally running [antiwork/gumroad](https://github.com/antiwork/gumroad) server
 
 If the intended API is not yet deployed to production or staging, you can build the app to point to your locally running gumroad/web server on https://gumroad.dev.
 
