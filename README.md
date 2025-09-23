@@ -27,6 +27,15 @@ cp Credentials/Production.xcconfig.example Credentials/Production.xcconfig
 cp Credentials/Staging.xcconfig.example Credentials/Staging.xcconfig
 ```
 
+4. **Add Google Services configuration**:
+
+```sh
+cp "Gumroad/Supporting Files/GoogleService-Info.plist.example" "Gumroad/Supporting Files/GoogleService-Info.plist"
+```
+
+Open the newly copied `GoogleService-Info.plist` and replace the placeholder values with your Firebase credentials.
+
+
 ### Building the app and opening it in a simulator
 
 1. Always open the Xcode workspace of the project instead of the project file.
@@ -65,28 +74,6 @@ echo "credential-value-here" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 4. Fill in the other required credentials in the same file (see the example files for guidance).
 
 Now you should be able to login in the app (in simulator) as any user registered in your locally running gumroad/web server.
-
-### Credential Management
-
-All sensitive credentials are centralized in the `Credentials/` directory:
-
-- `Credentials/Development.xcconfig` - Development environment credentials
-- `Credentials/Production.xcconfig` - Production environment credentials
-- `Credentials/Staging.xcconfig` - Staging environment credentials
-
-Example files (`.xcconfig.example`) are provided to show the required format. Copy these to create your actual credential files.
-
-#### Google Services Configuration
-
-The app requires a `GoogleService-Info.plist` file for Firebase and Google Services integration:
-
-1. **Set up the configuration file**:
-   ```sh
-   cp "Gumroad/Supporting Files/GoogleService-Info.plist.example" "Gumroad/Supporting Files/GoogleService-Info.plist"
-   ```
-
-2. **Configure Firebase credentials**: Open the newly copied `GoogleService-Info.plist` file and replace the dummy placeholder values with your actual Firebase credentials.
-
 
 ### Connecting to staging and production environments
 
