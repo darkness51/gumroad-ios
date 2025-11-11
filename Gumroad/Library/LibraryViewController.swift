@@ -13,6 +13,7 @@ import SwiftUI
 
 class LibraryViewController: UIViewController, StoryboardIdentifiable, FilterRowDelegate, ProductTableViewCellDelegate, ProductCarouselTableViewCellDelegate {
     static var storyboardName: StoryboardName = .library
+    static private let productCarouselCellIndex = 0
     
     @IBOutlet weak var libraryTitleLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -572,7 +573,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        if indexPath.row == Self.productCarouselCellIndex {
             productCarouselCell.configure(products: recentlyViewedProducts)
             return productCarouselCell
         }
@@ -590,7 +591,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
             toggleFilterView(forceClose: true)
             return
         }
-        if [0].contains(indexPath.row) {
+        if [Self.productCarouselCellIndex].contains(indexPath.row) {
             return
         }
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -599,7 +600,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        if indexPath.row == Self.productCarouselCellIndex {
             return recentlyViewedProducts.isEmpty ? 0 : productCarouselCellHeight
         } else {
             return productCellHeight
