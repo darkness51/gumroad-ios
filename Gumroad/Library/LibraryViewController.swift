@@ -455,6 +455,7 @@ class LibraryViewController: UIViewController, StoryboardIdentifiable, FilterRow
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.productCarouselCell.scrollToTop()
+            self.tableView.reloadData()
         }
     }
     
@@ -567,22 +568,20 @@ extension LibraryViewController: UISearchBarDelegate {
 
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return skeletonView.isHidden ? (productsToShow.count + 2) : 0
+        return skeletonView.isHidden ? (productsToShow.count + 1) : 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             productCarouselCell.configure(products: recentlyViewedProducts)
             return productCarouselCell
-        } else if indexPath.row == 1 {
-            return resultsCell
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier) as? ProductTableViewCell else {
             fatalError("The nib is not an instance of \(ProductTableViewCell.identifier).")
         }
         cell.selectionStyle = .none
         cell.delegate = self
-        cell.configure(with: productsToShow[indexPath.row - 2])
+        cell.configure(with: productsToShow[indexPath.row - 1])
         return cell
     }
     
@@ -591,19 +590,17 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
             toggleFilterView(forceClose: true)
             return
         }
-        if [0, 1].contains(indexPath.row) {
+        if [0].contains(indexPath.row) {
             return
         }
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        let product = productsToShow[indexPath.row - 2]
+        let product = productsToShow[indexPath.row - 1]
         showProduct(product: product)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return productCarouselCellHeight
-        } else if indexPath.row == 1 {
-            return resultsCellHeight
+            return recentlyViewedProducts.isEmpty ? 0 : productCarouselCellHeight
         } else {
             return productCellHeight
         }
